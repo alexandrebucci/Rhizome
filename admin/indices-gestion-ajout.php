@@ -1,3 +1,7 @@
+<?php
+  require_once("../datas/parametres.php");
+  setlocale (LC_TIME, 'fr-FR', 'fra');
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,7 +13,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="">
 
-    <title>Incognito - Gestion de la home</title>
+    <title>Incognito - Gestion des étapes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -26,7 +30,6 @@
   </head>
 
   <body>
-
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
         <div class="navbar-header">
            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html">Incognito - Admin</a>
@@ -35,14 +38,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active">
-              <a href="#">Gestion de la home</a>
+              <a href="indices-gestion-ajout.php">Ajout d'un indice</a>
             </li>
             <li>
-              <a href="etapes-gestion.php">Gestion des étapes</a>
+              <a href="indices-gestion.php">Gestion des indices</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="#">Gestion des commentaires</a>
-            </li>
+            </li> -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
@@ -56,8 +59,9 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Gestion de la home</h1>
-        <p>Vidéo, résumé, indice principal</p>
+        <h1>Ajout d'un indice</h1>
+        <p></p>
+        <!-- <button type="button" class="btn btn-primary">Créer une nouvelle étape</button> -->
       </div>
     </div>
 
@@ -65,38 +69,29 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
-          <h3>Gestion de la home</h3>
-          <form class="form-group" role="form" method="post" action="">
-            <!-- <div class="form-group">
-              <label class="sr-only" for="exampleInputEmail2">Email address</label>
-              <input type="email" "class="form-control id="exampleInputEmail2" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label class="sr-only" for="exampleInputPassword2">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Remember me
-              </label>
-            </div>
-            <button type="submit" class="btn btn-default">Sign in</button> -->
+          <form class="form-group" role="form" method="POST" action="script/indices-gestion-ajout-traitement.php">
+            <label for="indice_etape">Etape de l'indice</label>
+            <input type="text" class="form-control" size="80" name="indice_etape" id="indice_etape" placeholder="Etape de l'indice">
+
+            <label for="indice_type">Type de l'indice</label>
+            <input type="text" class="form-control" name="indice_type" id="indice_type" placeholder="Type de l'indice">
+
             <label for="indice_titre">Titre de l'indice</label>
-            <input type="text" class="form-control" size="80" name="titre_indice" id="titre_indice">
+            <input type="text" class="form-control" size="80" name="indice_titre" id="indice_titre" placeholder="Titre de l'indice">
 
-            <label for="indice_video">Video de l'indice</label>
-            <input type="text" class="form-control" size="80" name="indice_video" id="indice_video" placeholder="attention ce doit être le lien D'INTÉGRATION">
+            <label for="indice_photo">Photo de l'indice</label>
+            <input type="text" class="form-control" size="80" name="indice_photo" id="indice_photo" placeholder="Lien vers l'image">
 
-            <label for="indice_resume">Résumé de l'indice</label>
-            <textarea class="form-control" rows="6" name="indice_resume" id="indice_resume"></textarea>
+            <label for="indice_description">Description de l'indice</label>
+            <textarea class="form-control" rows="6" name="indice_description" id="indice_description" placeholder="Description de l'indice"></textarea>
+
+            
 
             <button type="submit" class="btn btn-info">Valider</button>
           </form>
+
         </div>
       </div>
-
-      
-
       <footer>
       </footer>
     </div> <!-- /container -->

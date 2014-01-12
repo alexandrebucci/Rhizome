@@ -37,11 +37,11 @@
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li>
+            <li class="active">
               <a href="etapes-gestion-ajout.php">Ajout d'une étape</a>
             </li>
-            <li class="active">
-              <a href="#">Gestion des étapes</a>
+            <li>
+              <a href="etapes-gestion.php">Gestion des étapes</a>
             </li>
             <!-- <li>
               <a href="#">Gestion des commentaires</a>

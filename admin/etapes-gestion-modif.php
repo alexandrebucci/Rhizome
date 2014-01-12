@@ -95,10 +95,10 @@
             <input type="text" class="form-control" size="80" name="etape_video" id="etape_video" value="<?php echo $donnees["Video"];?>">
 
             <label for="etape_resume">Résumé de l'étape</label>
-            <textarea class="form-control" rows="6" name="etape_resume" id="etape_resume" value="<?php echo $donnees["Resume"];?>"></textarea>
+            <textarea class="form-control" rows="6" name="etape_resume" id="etape_resume"><?php echo $donnees["Resume"];?></textarea>
 
             <label for="etape_description">Description de l'étape</label>
-            <textarea class="form-control" rows="6" name="etape_description" id="etape_description" value="<?php echo $donnees["Description"];?>"></textarea>
+            <textarea class="form-control" rows="6" name="etape_description" id="etape_description"><?php echo $donnees["Description"];?></textarea>
 
             <button type="submit" class="btn btn-info">Valider</button>
           </form>
