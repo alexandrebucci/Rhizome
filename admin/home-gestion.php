@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +38,7 @@
               <a href="#">Gestion de la home</a>
             </li>
             <li>
-              <a href="etapes-gestion.html">Gestion des étapes</a>
+              <a href="etapes-gestion.php">Gestion des étapes</a>
             </li>
             <li>
               <a href="#">Gestion des commentaires</a>
