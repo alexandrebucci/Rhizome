@@ -5,6 +5,7 @@
 
 body {
 	font-family: "Bitter";
+	text-align: justify;
 }
 
 /*Header */
@@ -191,5 +192,69 @@ nav li a:hover {
 	width: 53px;
 	left: -53px;
 	top: 0px;
+}
+
+.home_resume h2 {
+	font-size: 21px;
+	color: #222;
+	text-align: center;
+	margin: 15px 0px;
+}
+
+.home_resume a {
+	font-size: 16px;
+	font-weight: normal;
+	color: #fff;
+	display: inline-block;
+	margin-top: 1.2em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3em;
+	padding: 0.7em 0em;
+	outline: none;
+	text-decoration: none;
+	-webkit-transition: all 0.8s;
+	transition: all 0.8s;
+	width: 250px;
+	height: 20px;
+	line-height: 25px;
+	vertical-align: middle;
+	background: #AD1F1F;
+	text-align: center;
+	display: block;
+
+	-moz-box-shadow: 0px 5px 0px 0px #701616;
+	-webkit-box-shadow: 0px 5px 0px 0px #701616;
+	-o-box-shadow: 0px 5px 0px 0px #701616;
+	box-shadow: 0px 5px 0px 0px #701616;
+}
+
+.home_resume a:hover {
+	background: #911B1B;
+	-moz-box-shadow: 0px 5px 0px 0px #4E1010;
+	-webkit-box-shadow: 0px 5px 0px 0px #4E1010;
+	-o-box-shadow: 0px 5px 0px 0px #4E1010;
+	box-shadow: 0px 5px 0px 0px #4E1010;
+}
+
+.avancement {
+	position: relative;
+	top: 350px;
+	background: #222222;
+}
+
+.avancement h1 {
+	margin-top: 30px;
+	text-align: center;
+	color: #fff;
+	font-weight: normal;
+	font-size: 27px;
+}
+
+.hr_chelou {
+	width: 223px;
+	height: 24px;
+	margin: 20px auto 20px auto;
+	background: url(../img/hr_chelou.svg);
 }
 
