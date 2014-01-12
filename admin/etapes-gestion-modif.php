@@ -1,3 +1,11 @@
+<?php
+	require_once("../datas/parametres.php");
+  setlocale (LC_TIME, 'fr-FR', 'fra');
+	if (!empty($_GET['etape']))
+    	{
+        	$id = $_GET['etape'];
+    	}
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,7 +17,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="">
 
-    <title>Incognito - Admin</title>
+    <title>Incognito - Gestion des étapes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -26,7 +34,6 @@
   </head>
 
   <body>
-
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
         <div class="navbar-header">
            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html">Incognito - Admin</a>
@@ -35,21 +42,18 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li>
-              <a href="home-gestion.php">Gestion de la home</a>
+              <a href="etapes-gestion-ajout.php">Ajout d'une étape</a>
             </li>
-            <li>
-              <a href="etapes-gestion.php">Gestion des étapes</a>
+            <li class="active">
+              <a href="#">Gestion des étapes</a>
             </li>
             <!-- <li>
-              <a href="commentaires-gestion.php">Gestion des commentaires</a>
+              <a href="#">Gestion des commentaires</a>
             </li> -->
-            <li>
-              <a href="indices-gestion.php">Gestion des indices</a>
-            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="deconnexion.php">Déconnexion</a>
+              <a href="#">Déconnexion</a>
             </li>
           </ul>
         </div>
@@ -59,33 +63,50 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Bonjour</h1>
-        <p>Bon taff négro, force et honneur !</p>
+        <h1>Gestion de l'étape n°<?php echo $id;?></h1>
+        <p></p>
+        <!-- <button type="button" class="btn btn-primary">Créer une nouvelle étape</button> -->
       </div>
     </div>
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4 cage">
-          <h2>Gestion de la home</h2>
-          <p>Gestion du résumé, de la vidéo...</p>
-          <p><a class="btn btn-info" href="home-gestion.php" role="button">GOOOOO &raquo;</a></p>
-        </div>
-        <div class="col-md-4 cage">
-          <h2>Gestion des étapes</h2>
-          <p>Création des étapes avec les différents indices. Gestion de l'apparition des étapes sur la home ou non.</p>
-          <p><a class="btn btn-info" href="etapes-gestion.php" role="button">GOOOOO &raquo;</a></p>
-       </div>
-        <div class="col-md-4 cage">
-          <h2>Gestion des commentaires</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-info" href="commentaires-gestion.php" role="button">GOOOOO &raquo;</a></p>
+        <div class="col-md-12">
+          <h3>Modification d'une étape</h3>
+           <?php
+            $req = $PDO->prepare('SELECT *  FROM `etape` WHERE Id_E = :id');
+            $req->execute(array(
+                ":id"=> $id
+            ));
+            $resultat = $req->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($resultat as $donnees) {
+
+          ?>
+          <form class="form-group" role="form" method="POST" action="script/etapes-gestion-modif-traitement.php">
+          	<input type="hidden" name="etape_id" id="etape_id" value="<?php echo $id; ?>">
+            <label for="etape_titre">Titre de l'étape</label>
+            <input type="text" class="form-control" size="80" name="etape_titre" id="etape_titre" value="<?php echo $donnees["Titre"];?>">
+
+            <label for="etape_date">Date de l'étape</label>
+            <input type="date" class="form-control" name="etape_date" id="etape_date" value="<?php echo $donnees["Date"];?>">
+
+            <label for="etape_video">Video de l'étape</label>
+            <input type="text" class="form-control" size="80" name="etape_video" id="etape_video" value="<?php echo $donnees["Video"];?>">
+
+            <label for="etape_resume">Résumé de l'étape</label>
+            <textarea class="form-control" rows="6" name="etape_resume" id="etape_resume"><?php echo $donnees["Resume"];?></textarea>
+
+            <label for="etape_description">Description de l'étape</label>
+            <textarea class="form-control" rows="6" name="etape_description" id="etape_description"><?php echo $donnees["Description"];?></textarea>
+
+            <button type="submit" class="btn btn-info">Valider</button>
+          </form>
+          <?php
+           }
+          ?>
         </div>
       </div>
-
-      
-
       <footer>
       </footer>
     </div> <!-- /container -->
