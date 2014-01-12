@@ -43,6 +43,9 @@
             <li>
               <a href="#">Gestion des commentaires</a>
             </li>
+            <li>
+              <a href="indices-gestion.php">Gestion des indices</a>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
