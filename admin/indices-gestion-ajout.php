@@ -1,6 +1,11 @@
 <?php
   require_once("../datas/parametres.php");
   setlocale (LC_TIME, 'fr-FR', 'fra');
+  $req = $PDO->prepare('SELECT Id_I  FROM `indice`');
+  $req->execute();
+  $nbLigne = $req->rowCount();
+  $id_indice = $nbLigne + 1;
+
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +74,8 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
-          <form class="form-group" role="form" method="POST" action="script/indices-gestion-ajout-traitement.php">
+          <form class="form-group" role="form" method="POST" action="script/indices-gestion-ajout-traitement.php" enctype="multipart/form-data">
+            <input type="hidden" name="id_indice" id="id_indice" value="<?php echo $id_indice ?>">
             <label for="indice_etape">Etape de l'indice</label>
             <input type="text" class="form-control" size="80" name="indice_etape" id="indice_etape" placeholder="Etape de l'indice">
 
@@ -79,13 +85,14 @@
             <label for="indice_titre">Titre de l'indice</label>
             <input type="text" class="form-control" size="80" name="indice_titre" id="indice_titre" placeholder="Titre de l'indice">
 
+             <!-- valeur maxi de l'image uploadé 5Mo-->
+            <input type="hidden" name="MAX_FILE_SIZE" value="5242880" />
+
             <label for="indice_photo">Photo de l'indice</label>
-            <input type="text" class="form-control" size="80" name="indice_photo" id="indice_photo" placeholder="Lien vers l'image">
+            <input type="file" class="form-control" size="80" name="indice_photo" id="indice_photo" placeholder="Lien vers l'image">
 
             <label for="indice_description">Description de l'indice</label>
             <textarea class="form-control" rows="6" name="indice_description" id="indice_description" placeholder="Description de l'indice"></textarea>
-
-            
 
             <button type="submit" class="btn btn-info">Valider</button>
           </form>

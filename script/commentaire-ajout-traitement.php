@@ -17,19 +17,18 @@
 
 	$id_etape = $_POST['etape_id'];
 	//Requete INSERT
-	$req = "INSERT INTO commentaire (`Date`, `Description`, `Score`, `Id_U`, `Id_E`) VALUES ('".date("Y-m-d H:i:s")."', '".$description."', '0', '".$id_u."', '".$id_e"')";
+	$req = "INSERT INTO commentaire ( `Description`, `Score`, `Id_U`, `Id_E`) VALUES ('".$description."', 0, ".$id_u.", ".$id_e")";
 	mysql_query($req);
 
-	/*$q = $PDO->prepare('INSERT INTO commentaire (`Date`, `Description`, `Score`, `Id_U`, `Id_E`) VALUES ('.date("Y-m-d H:i:s").', :description, :score, :id_u, id_e)');
+	/*$q = $PDO->prepare('INSERT INTO commentaire (`Description`, `Score`, `Id_U`, `Id_E`) VALUES ( :description, :score, :idU, idE)');
     //Asignation des valeurs
     $q->execute(array(
-    	//":dat" => date("Y-m-d H:i:s"),
     	":description" => $description,
     	":score" => 0,
-    	":id_u" => 0,
-    	":id_e" => $id_etape
-    ));*/
-
+    	":idU" => 0,
+    	":idE" => $id_etape
+    ));
+*/
 	//$q = $PDO->exec('INSERT INTO commentaire (`Date`, `Description`, `Score`, `Id_U`, `Id_E`) VALUES ('.date("Y-m-d").', '.$description.', 0, 0, '.$id_etape.')');
     
     //Redirection vers la page de gestion des etapes
