@@ -4,8 +4,13 @@
 <svg version="1.0" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="52px" height="52px" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve">
 <g>
-	<rect fill="#FFFFFF" width="52" height="52"/>
-	<circle fill="#3465B0" cx="18.846" cy="25.878" r="6.418"/>
-	<circle fill="#ED1484" cx="33.237" cy="25.878" r="6.418"/>
+	<g>
+		<rect fill="#CC3433" width="52" height="52"/>
+	</g>
+	<g>
+		<path fill="#FFFFFF" d="M45.395,34.241c0,3.212-3.594,5.82-8.025,5.82H14.63c-4.432,0-8.024-2.608-8.024-5.82V17.757
+			c0-3.212,3.593-5.817,8.024-5.817h22.739c4.432,0,8.025,2.604,8.025,5.817V34.241z"/>
+		<polygon fill="#CC3433" points="22.184,20.428 32.788,26 22.184,31.57 		"/>
+	</g>
 </g>
 </svg>

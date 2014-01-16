@@ -2,22 +2,12 @@
 <!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg version="1.0" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="53px" height="53px" viewBox="0 0 53 53" enable-background="new 0 0 53 53" xml:space="preserve">
+	 width="52px" height="52px" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve">
 <g>
-	
-		<image overflow="visible" opacity="0.22" width="59" height="59" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
-GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATJJREFUeNrs27FOwzAUhWEnmLDR
-oTsMTPAevP9GZyoxgihbArScCydgCn0Au/+VjppYWT7Z6ZTTpa/plBOl93Urs1O2yruvP3GRM+Vc
-WShDsV4zNDIpG+VFGWMte2cDe6NcK0uv1Q6OXX1UVsqd8qS8ZR/jhbG3yqVy2gD4Vbn3/YPyHKZs
-2OCdvVCufMRrB4/+XRavacp+oPcxHoxtAZzs+fVn3BcPdXupeQ5a+nRkAxgwYMCAAQMGDBgwYMCA
-AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBjwv+DdXmqeg5b5A/G5+RGliNFrLXwRP9m1
-neE5/bQ/ohCxNrSVzsParqkEhz6qLis/3GKrZTPv8tH1lrrifS3LEC2002b0n2ZaOS3V8Er493wI
-MAB9gk5iefgcygAAAABJRU5ErkJggg==" transform="matrix(1 0 0 1 -2.5874 -2.5874)">
-	</image>
 	<g>
-		<rect fill="#3B5998" width="53" height="53"/>
+		<rect fill="#3B5998" width="52" height="52"/>
 	</g>
+	<path fill="#FFFFFF" d="M23.197,44.961h-7.845v-18.96H11.43v-6.538h3.921v-3.922c0-5.332,2.214-8.502,8.502-8.502h5.235v6.535
+		h-3.272c-2.448,0-2.611,0.914-2.611,2.618l-0.01,3.271h5.927L28.43,26h-5.234L23.197,44.961L23.197,44.961z"/>
 </g>
-<path fill="#FFFFFF" d="M23.643,45.825h-7.996V26.501H11.65v-6.664h3.997V15.84c0-5.435,2.257-8.666,8.665-8.666h5.336v6.661h-3.335
-	c-2.495,0-2.661,0.931-2.661,2.668l-0.01,3.333h6.042l-0.707,6.664h-5.335V45.825z"/>
 </svg>
