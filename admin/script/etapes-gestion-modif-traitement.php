@@ -13,9 +13,10 @@
 	$Video = $_POST["etape_video"];
 	$Resume = $_POST["etape_resume"];	
 	$Description = $_POST["etape_description"];
+	$ResumeCourt = $_POST["etape_resume_court"];
 	
 	//Requete UPDATE
-	$q = $PDO->prepare('UPDATE etape SET `Titre`=:Titre, `Date`=:Dat, `Video`=:Video, `Resume`=:Resume, `Description`=:Description WHERE `id_E` = :id');
+	$q = $PDO->prepare('UPDATE etape SET `Titre`=:Titre, `Date`=:Dat, `Video`=:Video, `Resume`=:Resume, `Description`=:Description, `ResumeCourt`=:ResumeCourt WHERE `id_E` = :id');
     //Asignation des valeurs
     $q->execute(array(
       ":Titre" => $Titre,
@@ -23,6 +24,7 @@
       ":Video" => $Video,
       ":Resume" => $Resume,
       ":Description" => $Description,
+      ":ResumeCourt" => $ResumeCourt,
       ":id" =>$id
     ));
 

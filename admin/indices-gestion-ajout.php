@@ -1,6 +1,11 @@
 <?php
   require_once("../datas/parametres.php");
   setlocale (LC_TIME, 'fr-FR', 'fra');
+  $req = $PDO->prepare('SELECT Id_I  FROM `indice`');
+  $req->execute();
+  $nbLigne = $req->rowCount();
+  $id_indice = $nbLigne + 1;
+
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +37,7 @@
   <body>
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
         <div class="navbar-header">
-           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html">Incognito - Admin</a>
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="index.php">Incognito - Admin</a>
         </div>
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -49,7 +54,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#">Déconnexion</a>
+              <a href="utils/deconnexion.php">Déconnexion</a>
             </li>
           </ul>
         </div>
@@ -69,23 +74,32 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
-          <form class="form-group" role="form" method="POST" action="script/indices-gestion-ajout-traitement.php">
-            <label for="indice_etape">Etape de l'indice</label>
+          <form class="form-group" role="form" method="POST" action="script/indices-gestion-ajout-traitement.php" enctype="multipart/form-data">
+            <input type="hidden" name="id_indice" id="id_indice" value="<?php echo $id_indice ?>">
+            <label for="indice_etape">Etape de l'indice <small>(obligatoire)</small></label>
             <input type="text" class="form-control" size="80" name="indice_etape" id="indice_etape" placeholder="Etape de l'indice">
 
-            <label for="indice_type">Type de l'indice</label>
-            <input type="text" class="form-control" name="indice_type" id="indice_type" placeholder="Type de l'indice">
-
+            <label for="indice_type">Type de l'indice <small>(obligatoire)</small></label>
+            <select required="required" class="form-control" name="indice_type" id="indice_type">
+              <option>Photo</option>
+              <option>Plan</option>
+              <option>Article</option>
+              <option>Lien</option>
+            </select>
             <label for="indice_titre">Titre de l'indice</label>
             <input type="text" class="form-control" size="80" name="indice_titre" id="indice_titre" placeholder="Titre de l'indice">
 
             <label for="indice_photo">Photo de l'indice</label>
-            <input type="text" class="form-control" size="80" name="indice_photo" id="indice_photo" placeholder="Lien vers l'image">
+            <input type="file" class="form-control" size="80" name="indice_photo" id="indice_photo">
+
+            <label for="indice_date">Date de l'indice</label>
+            <input type="date" class="form-control" size="80" name="indice_date" id="indice_date">
+
+            <label for="indice_url">Url de l'indice</label>
+            <input type="text" class="form-control" name="indice_url" id="indice_url">
 
             <label for="indice_description">Description de l'indice</label>
             <textarea class="form-control" rows="6" name="indice_description" id="indice_description" placeholder="Description de l'indice"></textarea>
-
-            
 
             <button type="submit" class="btn btn-info">Valider</button>
           </form>
