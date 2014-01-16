@@ -87,6 +87,9 @@
             <label for="etape_description">Description de l'étape</label>
             <textarea class="form-control" rows="6" name="etape_description" id="etape_description" placeholder="Description de l'étape"></textarea>
 
+            <label for="etape_resume_court">Résumé court de l'étape</label>
+            <textarea class="form-control" rows="6" name="etape_resume_court" id="etape_resume_court" placeholder="Résumé court de l'étape lorsqu'on est sur la home"></textarea>
+
             <button type="submit" class="btn btn-info">Valider</button>
           </form>
 

@@ -36,9 +36,9 @@
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li>
+            <!-- <li>
               <a href="home-gestion.php">Gestion de la home</a>
-            </li>
+            </li> -->
             <li>
               <a href="etapes-gestion.php">Gestion des étapes</a>
             </li>
@@ -62,27 +62,27 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Bonjour</h1>
-        <p>Bon taff négro, force et honneur !</p>
+        <p>Bienvenu sur l'admin d'incognito</p>
       </div>
     </div>
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4 cage">
+       <!--  <div class="col-md-4 cage">
           <h2>Gestion de la home</h2>
           <p>Gestion du résumé, de la vidéo...</p>
           <p><a class="btn btn-info" href="home-gestion.php" role="button">GOOOOO &raquo;</a></p>
-        </div>
-        <div class="col-md-4 cage">
+        </div> -->
+        <div class="col-md-6 cage">
           <h2>Gestion des étapes</h2>
-          <p>Création des étapes avec les différents indices. Gestion de l'apparition des étapes sur la home ou non.</p>
+          <p>Création et modification des étapes.</p>
           <p><a class="btn btn-info" href="etapes-gestion.php" role="button">GOOOOO &raquo;</a></p>
        </div>
-        <div class="col-md-4 cage">
-          <h2>Gestion des commentaires</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-info" href="commentaires-gestion.php" role="button">GOOOOO &raquo;</a></p>
+        <div class="col-md-6 cage">
+          <h2>Gestion des indices</h2>
+          <p>Création et gestion des indices.</p>
+          <p><a class="btn btn-info" href="indices-gestion.php" role="button">GOOOOO &raquo;</a></p>
         </div>
       </div>
 

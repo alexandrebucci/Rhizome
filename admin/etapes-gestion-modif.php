@@ -99,6 +99,9 @@
             <label for="etape_description">Description de l'étape</label>
             <textarea class="form-control" rows="6" name="etape_description" id="etape_description"><?php echo $donnees["Description"];?></textarea>
 
+            <label for="etape_resume_court">Résumé court de l'étape</label>
+            <textarea class="form-control" rows="6" name="etape_resume_court" id="etape_resume_court"><?php echo $donnees["ResumeCourt"];?></textarea>
+
             <button type="submit" class="btn btn-info">Valider</button>
           </form>
           <?php

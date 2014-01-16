@@ -34,6 +34,14 @@
     $Type = $_POST["indice_type"];	
 	$Titre = $_POST["indice_titre"];
 	$Description = $_POST["indice_description"];
+	$Date = $_POST["indice_date"];
+	//Si on ajoute une url
+    if(isset($_POST["indice_url"])){
+        $Url = $_POST["indice_url"];
+    }
+    else{
+        $Url = "";
+    }
 	
 	//Chaine vide si on upload pas de photo
 	$Photo = "";
@@ -57,13 +65,15 @@
 	}
 
 	//Requete UPDATE
-	$q = $PDO->prepare('INSERT INTO indice (`Type`, `Titre`, `Description`, `Photo`, `Id_E`) VALUES (:Type, :Titre, :Description, :Photo, :id_E)');
+	$q = $PDO->prepare('INSERT INTO indice (`Type`, `Titre`, `Description`, `Photo`, `Date`, `Url`, `Id_E`) VALUES (:Type, :Titre, :Description, :Photo,:Datee, :Url, :id_E)');
     //Asignation des valeurs
     $q->execute(array(
     	":Type" => $Type,
     	":Titre" => $Titre,
     	":Description" => $Description,
     	":Photo" => $Photo,
+    	":Datee" => $Date,
+    	":Url" => $Url,
     	":id_E" => $id_E
     ));
 
