@@ -1,0 +1,18 @@
+body{
+	margin:0px;
+	padding: 0px;
+}
+
+#photo, #map, #article, #lien{
+	width:200px;
+	height: 200px;
+	position: absolute;
+}
+
+.ON{
+	display: block;
+}
+
+.OFF{
+	visibility: hidden;
+}
