@@ -44,7 +44,7 @@ section div a:focus {
 
 .cl-effect-10 a span {
 	display: block;
-	padding: 16px 20px;
+	padding: 19px 20px 13px 0;
 	background: #222;
 	-webkit-transition: -webkit-transform 0.3s;
 	-moz-transition: -moz-transform 0.3s;
@@ -57,7 +57,7 @@ section div a:focus {
 	top: 0px;
 	left: 0;
 	z-index: -1;
-	/*padding: 10px 20px;*/
+	padding: 3px 20px 12px 0;
 	width: 100%;
 	height: 100%;
 	background: #3B5998;
