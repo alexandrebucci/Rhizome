@@ -1,0 +1,86 @@
+@media only screen and (min-width : 320px) and (max-width : 480px){
+	#menu_barre{
+		background: purple !important;
+	}
+}
+
+@media only screen and (min-width : 480px) and (max-width : 768px){
+	#menu_barre{
+		background: green !important;
+	}
+
+	body{
+		padding-left: 0!important;
+		padding-right: 0!important;
+	}
+
+	body a,h1,h2,h3{
+		margin-left: 20px !important;
+	}
+	body p {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	body .etape a {
+		margin: 1.5em auto !important;
+	}
+
+	body .home_resume a {
+		margin: 1.5em auto !important;
+	}
+
+	#home_video{
+		margin: 0 20px;
+	}
+
+	.cl-effect-10{
+		margin: 0 20px !important;
+	}
+
+	.cl-effect-10 a{
+		margin-left: 0 !important;
+		width: 87%;
+	}
+
+	footer ul {
+		margin: 5px auto 20px auto !important;
+	}
+
+	footer img {
+		margin-top: 20px !important;
+	}
+
+	footer li {
+		font-size: 11px;
+	}
+}
+
+@media only screen and (min-width : 768px) and (max-width : 980px){
+	#menu_barre{
+		background: yellow !important;
+	}
+	#menulist {
+		margin-left: 60px;
+	}
+	header .span3 a {
+		margin-left: 20px !important;
+	}
+	.cl-effect-10 a {
+		width: 76%;
+	}
+	.etape a {
+		margin: 0.5em auto 3em auto !important;
+		padding: 0.3em 0em !important;
+		width: 220px !important;
+	}
+}
+
+@media only screen and (max-width: 1110px) and (min-width: 980px){
+	#menu_barre{
+		background: red !important;
+	}
+	.cl-effect-10 a {
+		width: 82%;
+	}
+}
