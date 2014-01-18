@@ -35,6 +35,8 @@
 	$Titre = $_POST["indice_titre"];
 	$Description = $_POST["indice_description"];
 	$Date = $_POST["indice_date"];
+	$Lat = $_POST["indice_lat"];
+    $Long = $_POST["indice_long"];
 	//Si on ajoute une url
     if(isset($_POST["indice_url"])){
         $Url = $_POST["indice_url"];
@@ -65,7 +67,7 @@
 	}
 
 	//Requete UPDATE
-	$q = $PDO->prepare('INSERT INTO indice (`Type`, `Titre`, `Description`, `Photo`, `Date`, `Url`, `Id_E`) VALUES (:Type, :Titre, :Description, :Photo,:Datee, :Url, :id_E)');
+	$q = $PDO->prepare('INSERT INTO indice (`Type`, `Titre`, `Description`, `Photo`, `Date`, `Url`, `Lat`, `Long`, `Id_E`) VALUES (:Type, :Titre, :Description, :Photo, :Datee, :Url, :Lat, :Long, :id_E)');
     //Asignation des valeurs
     $q->execute(array(
     	":Type" => $Type,
@@ -74,6 +76,8 @@
     	":Photo" => $Photo,
     	":Datee" => $Date,
     	":Url" => $Url,
+    	":Lat" => $Lat,
+   	 	":Long" => $Long,
     	":id_E" => $id_E
     ));
 

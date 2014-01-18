@@ -31,6 +31,10 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+      #map-canvas { height: 400px; width:100%; margin-bottom: 20px }
+      #indice_long {margin-bottom: 20px;}
+    </style>
   </head>
 
   <body>
@@ -85,10 +89,10 @@
           ?>
           <form class="form-group" role="form" method="POST" action="script/indices-gestion-modif-traitement.php">
           	<input type="hidden" name="indice_id" id="indice_id" value="<?php echo $id; ?>">
-            <label for="indice_etape">Etape de l'indice <small>(obligatoire)</small></label>
-            <input type="text" required="required" class="form-control" size="80" name="indice_etape" id="indice_etape" value="<?php echo $donnees["Id_E"];?>">
+            <label for="indice_etape">Etape de l'indice<small> (obligatoire)</small></label>
+            <input required="required" type="text"  class="form-control" size="80" name="indice_etape" id="indice_etape" value="<?php echo $donnees["Id_E"];?>">
 
-            <label for="indice_type">Type de l'indice<small> (obligatoire)</small</label>
+            <label for="indice_type">Type de l'indice<small> (obligatoire)</small></label>
             <select required="required" class="form-control" name="indice_type" id="indice_type">
               <?php
                 //Affichage du type dans la BDD en selected
@@ -134,11 +138,18 @@
             <label for="indice_description">Description de l'indice</label>
             <textarea class="form-control" rows="6" name="indice_description" id="indice_description"><?php echo $donnees["Description"];?></textarea>
             
+            <label for="indice_lat">Lattitude de l'indice</label>
+            <input type="text" class="form-control" size="80" name="indice_lat" id="indice_lat" value="<?php echo $donnees["Lat"];?>">
+
+            <label for="indice_long">Longitude de l'indice</label>
+            <input type="text" class="form-control" size="80" name="indice_long" id="indice_long" value="<?php echo $donnees["Long"];?>">
+
+            <div id="map-canvas"></div>
 
             <button type="submit" class="btn btn-info">Valider</button>
           </form>
           <?php
-           }
+            }
           ?>
         </div>
       </div>
@@ -152,5 +163,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+     <!-- GOOGLE MAP API -->
+    <script language="Javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="js/map.js"></script>
   </body>
 </html>
