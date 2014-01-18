@@ -1,3 +1,12 @@
+<?php
+	require_once("datas/parametres.php");
+	if(isset($_GET['etape'])){
+		$idE = $_GET['etape'];
+	}
+	else{
+		$idE = 0;
+	}
+?>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -7,6 +16,7 @@
 	</head>
 
 	<body>
+		
 		<div>
 			<p id="photo_btn">photo</p>
 			<p id="map_btn">map</p>
@@ -16,25 +26,62 @@
 		</div>
 		<div id='photo'class="ON">
 			<p>
-				photo
+				<?php 
+					
+					$reqP = $PDO->prepare('SELECT * FROM `indice` WHERE `Type`= "Photo" AND `Id_E` = :idE');
+					$reqP->execute(Array(
+						":idE" => $idE
+					));
+		      $resultatP = $reqP->fetchAll(PDO::FETCH_ASSOC);
+		      foreach ($resultatP as $donnees) {
+		      	echo $donnees['Id_I'].'<br/>';
+		      }
+				?>
 			</p>
 		</div>
 
 		<div id='map' class="OFF">
 			<p>
-				map
+				<?php 
+					$reqM = $PDO->prepare('SELECT * FROM `indice` WHERE `Type`= "Plan" AND `Id_E` = :idE');
+					$reqM->execute(Array(
+						":idE" => $idE
+					));
+		      $resultatM = $reqM->fetchAll(PDO::FETCH_ASSOC);
+		      foreach ($resultatM as $donnees) {
+		      	echo $donnees['Id_I'].'<br/>';
+		      }
+				?>
 			</p>
 		</div>
 
 		<div id='article'class="OFF">
 			<p>
-				article
+				<?php 
+					$reqA = $PDO->prepare('SELECT * FROM `indice` WHERE `Type`= "Article" AND `Id_E` = :idE');
+					$reqA->execute(Array(
+						":idE" => $idE
+					));
+		      $resultatA = $reqA->fetchAll(PDO::FETCH_ASSOC);
+		      foreach ($resultatA as $donnees) {
+		      	echo $donnees['Id_I'].'<br/>';
+		      }
+				?>
 			</p>
 		</div>
 
 		<div id='lien'class="OFF">
 			<p>
-				lien
+				<?php 
+					$reqL = $PDO->prepare('SELECT * FROM `indice` WHERE `Type`= "Lien" AND `Id_E` = :idE');
+					$reqL->execute(Array(
+						":idE" => $idE
+					));
+		      $resultatL = $reqL->fetchAll(PDO::FETCH_ASSOC);
+		      foreach ($resultatL as $donnees) {
+		      	echo $donnees['Id_I'].'<br/>';
+		      }
+				?>
 			</p>
 		</div>
 	</body>

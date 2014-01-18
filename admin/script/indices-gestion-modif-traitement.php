@@ -23,9 +23,11 @@
     $id = $_POST["indice_id"];
     $id_E = $_POST["indice_etape"];
     $Type = $_POST["indice_type"];	
-	$Titre = $_POST["indice_titre"];
-	$Description = $_POST["indice_description"];
+  	$Titre = $_POST["indice_titre"];
+  	$Description = $_POST["indice_description"];
     $Date = $_POST["indice_date"];
+    $Lat = $_POST["indice_lat"];
+    $Long = $_POST["indice_long"];
     //si on upload une photo
     if(isset($_POST["indice_photo"])){
         $Photo = $_POST["indice_photo"];
@@ -61,16 +63,18 @@
         } 
     }
 	//Requete UPDATE
-	$q = $PDO->prepare('UPDATE indice SET `Type` = :Type, `Titre`=:Titre, `Photo`=:Photo, `Date`=:Datee, `Url`=:Url, `Id_E` = :id_E WHERE `id_I` = :id');
+	$q = $PDO->prepare('UPDATE indice SET `Type` = :Type, `Titre`=:Titre, `Photo`=:Photo, `Date`=:Datee, `Url`=:Url,`Lat`=:Lat, `Long`=:Long, `Id_E` = :id_E WHERE `id_I` = :id');
     //Asignation des valeurs
     $q->execute(array(
     	":Type" => $Type,
      	":Titre" => $Titre,
      	":Photo" => $Photo,
-        ":Datee" => $Date,
-        ":Url" => $Url,
+      ":Datee" => $Date,
+      ":Url" => $Url,
+      ":Lat" => $Lat,
+      ":Long" => $Long,
      	":id_E" => $id_E,
-      	":id" =>$id
+      ":id" =>$id
     ));
 
     //Redirection vers la page de gestion des etapes

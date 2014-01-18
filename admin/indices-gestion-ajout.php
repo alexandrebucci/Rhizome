@@ -32,6 +32,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+      #map-canvas { height: 400px; width:100%; margin-bottom: 20px }
+      #indice_long {margin-bottom: 20px;}
+    </style>
   </head>
 
   <body>
@@ -101,6 +106,13 @@
             <label for="indice_description">Description de l'indice</label>
             <textarea class="form-control" rows="6" name="indice_description" id="indice_description" placeholder="Description de l'indice"></textarea>
 
+            <label for="indice_lat">Lattitude de l'indice</label>
+            <input type="text" class="form-control" size="80" name="indice_lat" id="indice_lat" placeholder="Lattitude">
+
+            <label for="indice_long">Longitude de l'indice</label>
+            <input type="text" class="form-control" size="80" name="indice_long" id="indice_long" placeholder="Longitude">
+
+            <div id="map-canvas"></div>
             <button type="submit" class="btn btn-info">Valider</button>
           </form>
 
@@ -116,5 +128,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- GOOGLE MAP API -->
+    <script language="Javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="js/map.js"></script>
   </body>
 </html>
