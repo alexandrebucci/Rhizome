@@ -101,6 +101,6 @@
       <div id="map-canvas"></div>
     </div>
 
-    <div id="description"><p>totote</p></div>
+    <div id="description"></div>
   </body>
 </html>
