@@ -13,27 +13,30 @@ initialize = function(){
  
   map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
 };
- 
+
+//Création de la carte
 initialize();
+//Si les champs lat et long sont remplis
 if (document.getElementById('indice_lat').value != "" && document.getElementById('indice_long').value !=""){
-	//Affichage du markeur lorsqu'on souhaite modifier l'indice
+	//Affichage du markeur sur la position dans la BDD lorsqu'on souhaite modifier l'indice
 	marker = new google.maps.Marker({
-	    position: new google.maps.LatLng(document.getElementById('indice_lat').value, document.getElementById('indice_long').value),
-	    map: map
-		});
+	  position: new google.maps.LatLng(document.getElementById('indice_lat').value, document.getElementById('indice_long').value),
+	  map: map
+	});
 	//On centre la map sur le marker
 	map.setCenter(marker.getPosition());
 }
 
 //Ajout d'un nouveau marker à la position cliquée et remplissage des champs lat et long du formulaire
 google.maps.event.addListener(map, 'click', function( event ){
+	//On rempli les champs lat et long avec les valeurs de l'emplacement cliqué
 	document.getElementById('indice_lat').value = event.latLng.lat();
 	document.getElementById('indice_long').value = event.latLng.lng();
 	//Si il y a deja un marker on le retire de la map
   if (marker != null){
   	marker.setMap(null);
   }
-
+  //On positionne un marker à l'emplacement cliqué
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(event.latLng.lat(),event.latLng.lng()),
     map: map,
