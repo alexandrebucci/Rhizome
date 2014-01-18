@@ -390,9 +390,9 @@ p {
 	font-size: 27px;
 }
 
-.partenaires .span1 a img{ 
+.partenaires .span2 a img{ 
 	display: block;
-	width: 140px;
+	width: 90%;
 	margin: 0 auto 40px auto;
 	-moz-box-shadow: 0px 5px 0px 0px #cccccc;
 	-webkit-box-shadow: 0px 5px 0px 0px #cccccc;
@@ -411,7 +411,7 @@ p {
 	transition: all .4s ease;
 }
 
-.partenaires .span1 a:hover img{
+.partenaires .span2 a:hover img{
 	-webkit-filter: grayscale(0);
 	-moz-filter: grayscale(0);
 	-o-filter: grayscale(0);
