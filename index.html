@@ -48,20 +48,30 @@
                                 </div>
                             </div>
                         </div>
-
-                   
-                </div>
-                 <div class="row-fluid">
-                    <div class="span6">
-                        <p>Je m’appelle Damien et je suis à la recherche d’une mystérieuse personne à <span>Montbéliard</span>. J’ai besoin de votre aide pour la démasquer.</p>
                     </div>
-                </div>
-                <div class="row-fluid">
-                    <div class="span3">
-                        <a href="#">Découvre mon histoire</a>
+                    <div id="menu_mobile">
+                        <div id="mobile_barre">
+                            <a href="#" id="logo_mobile"><img src="img/mobile/logo.svg" alt="logomobile"></a>
+                            <a href="#" id="menu_a_mobile"><img src="img/mobile/menu.svg" alt="menu"></a>
+                        </div>
+                        <div id="rubriques">
+                            <ul>
+                                <li>Histoire</li>
+                                <li>Étapes</li>
+                                <li>Flickr</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <p>Je m’appelle Damien et je suis à la recherche d’une mystérieuse personne à <span>Montbéliard</span>. J’ai besoin de votre aide pour la démasquer.</p>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <a href="#">Découvre mon histoire</a>
+                        </div>
+                    </div>
             </nav>
             <!--end:main-nav--> 
         </header>
@@ -83,23 +93,22 @@
                 </div>
                 <div class="span4 main_right_home">
                     <h2><span>Rejoins-nous</span></h2>
-                        <section class="color-10">
-                            <div class="cl-effect-10">
-                                <div id="fb">
-                                    <img src="img/fb.svg"><a href="#" target="_blank" data-hover="Facebook"><span>Facebook</span></a>
-                                </div>
-                                <div id="tw">
-                                    <img src="img/tw.svg"><a href="#" target="_blank" data-hover="Twitter"><span>Twitter</span></a>
-                                </div>
-                                <div id="yt">
-                                    <img src="img/yt.svg"><a href="#" target="_blank" data-hover="Youtube"><span>Youtube</span></a>
-                                </div>
-                                <div id="fl">
-                                    <img src="img/fl.svg"><a href="#" target="_blank" data-hover="Flickr"><span>Flickr</span></a>
-                                </div>
+                    <section class="color-10">
+                        <div class="cl-effect-10">
+                            <div id="fb">
+                                <img src="img/fb.svg"><a href="#" target="_blank" data-hover="Facebook"><span>Facebook</span></a>
                             </div>
-                        </section>
-
+                            <div id="tw">
+                                <img src="img/tw.svg"><a href="#" target="_blank" data-hover="Twitter"><span>Twitter</span></a>
+                            </div>
+                            <div id="yt">
+                                <img src="img/yt.svg"><a href="#" target="_blank" data-hover="Youtube"><span>Youtube</span></a>
+                            </div>
+                            <div id="fl">
+                                <img src="img/fl.svg"><a href="#" target="_blank" data-hover="Flickr"><span>Flickr</span></a>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -139,12 +148,13 @@
                 </div>
             </div>
             <div class="row-fluid">
-                <div class="span2"><a href="" target="_blank"><img src="img/partenaires/axone.jpg" alt="axone"></a></div>
+                <div class="span1"><a href="" target="_blank"><img src="img/partenaires/axone.jpg" alt="axone"></a></div>
+                <div class="span1"><a href="" target="_blank"><img src="img/partenaires/axone.jpg" alt="axone"></a></div>
                 <!-- <div class="span2"></div>
-                <div class="span2"></div>
-                <div class="span2"></div>
-                <div class="span2"></div>
-                <div class="span2"></div> -->
+                    <div class="span2"></div>
+                    <div class="span2"></div>
+                    <div class="span2"></div>
+                    <div class="span2"></div> -->
             </div>
         </div>
         <footer>
@@ -152,15 +162,43 @@
                 <div class="row-fluid">
                     <div class="span10 offset1">
                         <ul>
-                            <li><a href="#"><p>Histoire</p></a></li>
-                            <li><p>X</p></li>
-                            <li><a href="#"><p>Étapes</p></a></li>
-                            <li><p>X</p></li>
-                            <li><a href="#"><p>Flick</p></a></li>
-                            <li><p>X</p></li>
-                            <li><a href="#"><p>À propos</p></a></li>
-                            <li><p>X</p></li>
-                            <li><a href="#"><p>Mentions légales</p></a></li>
+                            <li>
+                                <a href="#">
+                                    <p>Histoire</p>
+                                </a>
+                            </li>
+                            <li>
+                                <p>X</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Étapes</p>
+                                </a>
+                            </li>
+                            <li>
+                                <p>X</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Flick</p>
+                                </a>
+                            </li>
+                            <li>
+                                <p>X</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>À propos</p>
+                                </a>
+                            </li>
+                            <li>
+                                <p>X</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Mentions légales</p>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -178,7 +216,9 @@
         </footer>
         <!--end:flx-footer-->
     </body>
-    <script type="text/javascript" src="js/jquery_1_10_2.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/switch_div.js"></script>
+    
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
 </html>

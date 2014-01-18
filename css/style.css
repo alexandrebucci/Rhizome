@@ -10,6 +10,10 @@ header {
 	font-family: 'Roboto', sans-serif;
 }
 
+#menu_mobile {
+	display: none;
+}
+
 header .span6 p{
 	font-size: 24px;
 	font-weight: 100;
@@ -69,6 +73,11 @@ header .span3 a:active {
 	-ms-transition: all .1s ease;
 	-o-transition: all .1s ease;
 	transition: all .1s ease;
+}
+
+#menu_barre #logo img {
+	position: absolute;
+	top: 0;
 }
 
 /*Header */
@@ -381,7 +390,7 @@ p {
 	font-size: 27px;
 }
 
-.partenaires .span2 a img{ 
+.partenaires .span1 a img{ 
 	display: block;
 	width: 140px;
 	margin: 0 auto 40px auto;
@@ -402,7 +411,7 @@ p {
 	transition: all .4s ease;
 }
 
-.partenaires .span2 a:hover img{
+.partenaires .span1 a:hover img{
 	-webkit-filter: grayscale(0);
 	-moz-filter: grayscale(0);
 	-o-filter: grayscale(0);
