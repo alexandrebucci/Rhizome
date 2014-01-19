@@ -19,6 +19,10 @@
 		margin-right: 10px;
 	}
 
+	.ban .span6 p {
+		text-shadow:2px 2px 1px rgba(0,0,0,.8);
+	} 
+
 	#menu_barre {
 		display: none;
 	}
@@ -207,6 +211,10 @@
 		margin: 1.5em auto !important;
 	}
 
+	.ban .span6 p {
+		text-shadow:2px 2px 1px rgba(0,0,0,.8);
+	} 
+
 	#home_video{
 		margin: 0 20px;
 	}
@@ -373,6 +381,10 @@
 		width: 100%;
 	}
 
+	.ban .span6 p {
+		text-shadow:2px 2px 1px rgba(0,0,0,.8);
+	} 
+
 	#mobile_barre {
 		background: #070707;
 		height: 71px;
@@ -525,6 +537,10 @@
 	.etape h4 {
 		font-size: 15.5px !important;
 	}
+
+	.ban .span6 p {
+		text-shadow:2px 2px 1px rgba(0,0,0,.8);
+	} 
 }
 
 @media only screen and (max-width: 1110px) and (min-width: 980px){

@@ -187,8 +187,8 @@
                 </div>
             </div>
             <div class="row-fluid">
-                <div class="span2"><a href="" target="_blank"><img src="img/partenaires/axone.jpg" alt="axone"></a></div>
-                <div class="span2"><a href="" target="_blank"><img src="img/partenaires/axone.jpg" alt="axone"></a></div>
+                <div class="span2"><a href="http://www.axone-montbeliard.fr/" target="_blank"><img src="img/partenaires/axone.jpg" alt="axone"></a></div>
+                <div class="span2"><a href="http://www.encreservice.com/" target="_blank"><img src="img/partenaires/encre_service.jpg" alt="encre service"></a></div>
                 <!-- <div class="span2"></div>
                     <div class="span2"></div>
                     <div class="span2"></div>
