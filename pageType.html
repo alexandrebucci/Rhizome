@@ -14,16 +14,51 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 
+        <link rel="stylesheet" type="text/css" href="lightBoxjbv/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+
         <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="js/indice.js"></script>
+
+        <!-- Add fancyBox main JS and CSS files -->
+        <script type="text/javascript" src="lightBox/jquery.fancybox.js?v=2.1.5"></script>
+
         <!-- Favicons
             ================================================== -->
         <link rel="shortcut icon" href="images/favicon.ico">
         <!-- Style
             ================================================== -->
         <link rel="stylesheet" href="css/style.css" type="text/css"/>
+
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+             *  Simple image gallery. Uses default settings
+             */
+
+            $('.fancybox').fancybox();
+
+            /*
+             *  Different effects
+             */
+
+            // Change title type, overlay closing speed
+            $(".fancybox-effects-a").fancybox({
+                helpers: {
+                    title : {
+                        type : 'outside'
+                    },
+                    overlay : {
+                        speedOut : 0
+                    }
+                }
+            });
+        });
+        </script>
     </head>
     <body>
+    <a class="fancybox" href="1_b.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
         <header>
             <nav>
                 <div class="ban">
@@ -140,9 +175,37 @@
                             </ul>
                         <div class="clear"></div>
                         <div id='photo'class="ON">
-                            <p>
-                                photo
-                            </p>
+                            <div class="span3">
+                                <div class="rogneImg">
+                                    <img src="imgIndice/zae.jpg">
+                                    <p>18/10/2013</p>
+                                    <a href="#">Flickr</a>
+                                </div>
+                                
+                            </div>
+                            <div class="span3">
+                                <div class="rogneImg">
+                                    <img src="imgIndice/zae.jpg">
+                                    <p>18/10/2013</p>
+                                    <a href="#">Flickr</a>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="span3">
+                                <div class="rogneImg">
+                                    <div class="proposeImg">
+                                        <h1>Propose moi d’autres photos à travers tes commentaires. Elles peuvent s’avérer utiles.</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span3">
+                                <div class="rogneImg">
+                                    <div class="blackImg"></div>
+                                </div>
+                            </div>
+
+
                         </div>
 
                         <div id='map' class="OFF">

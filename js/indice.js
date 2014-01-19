@@ -37,3 +37,13 @@ $(document).ready(function(){
 		return false;
 	});
 });
+$(document).ready(function(){
+	// size image rogne
+	var cw = $('.rogneImg').width();
+	$('.rogneImg').css({'height':cw+'px'});
+
+	$( window ).resize(function() {
+		var cw = $('.rogneImg').width();
+		$('.rogneImg').css({'height':cw+'px'});
+	});
+});
