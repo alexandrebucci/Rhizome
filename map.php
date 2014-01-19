@@ -45,7 +45,11 @@
         //Options de la carte
         var mapOptions = {
           center: new google.maps.LatLng(47.5099792, 6.8016417),
-          zoom: 15
+          zoom: 15,
+          scrollwheel: false,
+          scaleControl: true,
+          panControl: true,
+          mapTypeControl: true
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
