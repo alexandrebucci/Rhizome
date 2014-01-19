@@ -1,11 +1,12 @@
 <?php
   require_once("../datas/parametres.php");
   setlocale (LC_TIME, 'fr-FR', 'fra');
-  $req = $PDO->prepare('SELECT Id_I  FROM `indice`');
+  $req = $PDO->prepare('SELECT MAX(`Id_I`) `Id_I` FROM `indice`');
   $req->execute();
-  $nbLigne = $req->rowCount();
-  $id_indice = $nbLigne + 1;
-
+  $res=$req->fetchAll(PDO::FETCH_ASSOC);
+  foreach ($res as $donnees) {
+    $id_indice = $donnees['Id_I'] + 1;
+  }
 ?>
 
 <!DOCTYPE html>
@@ -113,6 +114,7 @@
             <input type="text" class="form-control" size="80" name="indice_long" id="indice_long" placeholder="Longitude">
 
             <div id="map-canvas"></div>
+
             <button type="submit" class="btn btn-info">Valider</button>
           </form>
 
@@ -132,6 +134,6 @@
     <!-- GOOGLE MAP API -->
     <script language="Javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
-    <script type="text/javascript" src="js/map-admin.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
   </body>
 </html>
