@@ -21,6 +21,8 @@ header .span6 p{
 	line-height: 30px;
 	padding: 80px 0 30px 20px;
 	font-weight: 100;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	text-align: left;
 }
 
 header .span6 p span {
@@ -89,6 +91,7 @@ header .span3 a:active {
 	background:url(../img/photos/ban.jpg);
 	background-position-y: 55%; 
 	border-bottom: 5px solid #AD1F1F;
+	background-size: 100%;
 }
 /* Menu de la home */
 
@@ -289,12 +292,11 @@ p {
 .etape {
 	background: #e6e6e6;
 	/*min-height: 80px;*/
-	height: 210px;
+	height: 195px;
 	/*max-height: 100px;*/
 	width: 100%;
-	margin: 0 auto 0 auto;
+	margin: 0 auto 45px auto;
 	position: relative;
-	margin-bottom: 25px;
 }
 
 .etape h4 {
@@ -340,7 +342,7 @@ p {
 	text-decoration: none !important;
 	-webkit-transition: all 0.8s;
 	transition: all 0.8s;
-	width: 250px;
+	width: 94%;
 	height: 20px;
 	line-height: 25px;
 	vertical-align: middle;
@@ -380,6 +382,7 @@ p {
 
 .partenaires{
 	background:url(../img/texture.png) repeat;
+	border-bottom: 5px solid #AD1F1F;
 }
 
 .partenaires h1 {

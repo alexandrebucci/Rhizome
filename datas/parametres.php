@@ -4,9 +4,9 @@
   define("USER_DB","root");
   define("BASE_DB","incognito");
   //Windows
-  define("PASSWD_DB","");
+  //define("PASSWD_DB","");
   //Mac
-  //define("PASSWD_DB","root");
+  define("PASSWD_DB","password");
 
   try {
     $PDO = new PDO("mysql:host=".HOST_DB.";dbname=".BASE_DB."", USER_DB, PASSWD_DB);
