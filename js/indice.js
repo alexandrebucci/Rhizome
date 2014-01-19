@@ -3,8 +3,8 @@ $(document).ready(function(){
 
 	
 		// on active le titre
-		$('#photo_btn span').addClass('active');
-		$('#photo_btn span').addClass('activeAfter');
+		$('#map_btn span').addClass('active');
+		$('#map_btn span').addClass('activeAfter');
 
 	$('#photo_btn').click(function(){
 		console.log("bouton photo");
@@ -89,5 +89,19 @@ $(document).ready(function(){
 	$( window ).resize(function() {
 		var cw = $('.rogneImg').width();
 		$('.rogneImg').css({'height':cw+'px'});
+	});
+});
+
+$(document).ready(function(){
+	// size image rogne img lieu
+	var rogne2 = $('#descriptionLieu').height();
+		console.log(rogne2);
+		$('.rogneImg2').css({'height':(rogne2+15)+'px'});
+
+	$( window ).resize(function() {
+
+		var rogne2 = $('#descriptionLieu').height();
+		console.log(rogne2);
+		$('.rogneImg2').css({'height':(rogne2+15)+'px'});
 	});
 });

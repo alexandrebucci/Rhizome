@@ -658,7 +658,8 @@ footer .span12 p {
 }
 
 .OFF{
-	display: none;
+	visibility: hidden;
+	position:absolute;
 }
 
 #contenuIndice{
@@ -721,6 +722,7 @@ height: 95%;
 	height: 100%
 }
 
+
 /* MAP */
 #map-container{position:relative; height:500px;}
 #map-canvas {  height: 100%; width: 100%;margin-bottom:20px;  }
@@ -729,10 +731,12 @@ height: 95%;
 	margin-top: 20px;
 	
 }
+
 #descriptionLieu{
 	background-color: #E6E6E6;
 	padding: 0 10px 16px;
 	margin-top: -10px;
+	/*height: 200px;*/
 }
 
 #descriptionLieu a{
@@ -743,10 +747,17 @@ height: 95%;
 #descriptionLieu h2{
 	font-size: 1.54em;
 	color: #B51818;
-	margin-bottom: -10px;
+	margin-bottom: -5px;
 }
 #description img{
 
-	width: 100%;
-	height: 100%;
+ position: relative; /* allows repositioning */
+    left: 100%; /* move the whole width of the image to the right */
+    margin-left: -200%; /* magic! */
+    max-height: 100%;}
+.rogneImg2{
+    text-align: center; /* ensures the image is always in the h-middle */
+    overflow: hidden; /* hide the cropped portion */
+    position: relative;
 }
+
