@@ -327,5 +327,5 @@
         })();
     </script>
     <!-- lightBox -->
-      <script type="text/javascript" src="lightBox/jquery.fancybox.js?v=2.1.5"></script>
+      <script type="text/javascript" src="lightBox/jquery.fancybox.js?v=2.1.5"></script>/*
 </html>
