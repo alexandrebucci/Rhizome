@@ -20,15 +20,6 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8">
 
-
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
-      #map-container{position:relative; height:500px;}
-      #map-canvas {  height: 100%; width: 100%; }
-      #description {position: relative;}
-    </style>
-
     <script language="Javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript">
@@ -60,14 +51,16 @@
           //Lat et lng de l'indice dans la BDD
           lat = <?php echo $donnees['Lat'];?>;
           lng = <?php echo $donnees['Long'];?>;
+
           markerLatLng = new google.maps.LatLng(lat, lng);
 
           var url = "<?php echo $donnees['Url'];?>";
 
           //Chaque contenu est indentifié par contentString+Id_I
-          var contentString<?php echo $donnees['Id_I'];?> = "<h2><?php echo $donnees['Titre'];?></h2>"+
+          var contentString<?php echo $donnees['Id_I'];?> = "<div class='row-fluid'><div class='span7'><div id='descriptionLieu'><h2><?php echo $donnees['Titre'];?></h2>"+
             "<p><?php echo $donnees['Description'];?></p>"+
-            "<a href='"+url+"' target='_blank'>Plus d'infos</a>";
+            "<div class='home_resume'><a href='"+url+"' target='_blank'>Plus d'infos</a></div></div></div>"+
+            "<div class='span5'><div class='rogneImg'><img src='<?php echo $donnees['Photo'];?>'alt'<?php echo $donnees['Id_I'];?>'></div></div></div>";
           //Chaque marker est indentifié par marker+Id_I
           var marker<?php echo $donnees['Id_I'];?> = new google.maps.Marker({
             position: markerLatLng,
@@ -80,7 +73,7 @@
 
           //Au click sur un marker on affiche son contenu 
           google.maps.event.addListener(marker<?php echo $donnees['Id_I'];?>, 'click', function() {
-            document.getElementById('description').innerHTML = contentString<?php echo $donnees['Id_I'];?>;
+            document.getElementById('description').innerHTML = contentString<?php echo "<div class='span7'>"+$donnees['Id_I']+"</div>";?>;
             marker<?php echo $donnees['Id_I'];?>.setIcon(markerON);
             //Boucle qui parcourt tous les markers du tableau et qui met l'image OFF a tous les markers autres que celui cliqué
             //Pour n'avoir qu'un seul marker ON
@@ -105,6 +98,7 @@
       <div id="map-canvas"></div>
     </div>
 
-    <div id="description"></div>
+ 
+      <div id="description"></div>
   </body>
 </html>
