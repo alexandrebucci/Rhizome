@@ -176,58 +176,65 @@
                                 <li id="lien_btn" href="#"><span>Liens</span></li>
                             </ul>
                         <div class="clear"></div>
-                        <div id='photo'class="ON">
-                            <div class="span3">
-                                <div class="rogneImg">
-                                 <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
-                                    <p>18/10/2013</p>
-                                    <a href="#">Flickr</a>
+                        <div id="contenuIndice">
+                            <div id='photo'class="ON">
+                             <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="rogneImg">
+                                     <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
+                                        <p>18/10/2013</p>
+                                        <a href="#">Flickr</a>
+                                    </div>
+                                    
+                                </div>
+                                <div class="span3">
+                                    <div class="rogneImg">
+                                     <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
+                                        <p>18/10/2013</p>
+                                        <a href="#">Flickr</a>
+                                    </div>
+                                    
                                 </div>
                                 
-                            </div>
-                            <div class="span3">
-                                <div class="rogneImg">
-                                 <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
-                                    <p>18/10/2013</p>
-                                    <a href="#">Flickr</a>
-                                </div>
-                                
-                            </div>
-                            
-                            <div class="span3">
-                                <div class="rogneImg">
-                                    <div class="proposeImg">
-                                        <h1>Propose moi d’autres photos à travers tes commentaires. Elles peuvent s’avérer utiles.</h1>
+                                <div class="span3">
+                                    <div class="rogneImg">
+                                        <div class="proposeImg">
+                                            <h1>Propose moi d’autres photos à travers tes commentaires. Elles peuvent s’avérer utiles.</h1>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="span3">
+                                    <div class="rogneImg">
+                                        <div class="blackImg"></div>
+                                    </div>
+                                </div>
+                                </div>
+
+
                             </div>
-                            <div class="span3">
-                                <div class="rogneImg">
-                                    <div class="blackImg"></div>
+
+                            <div id='map' class="OFF">
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <?php include_once("map.php"); ?>
+                                </div>
                                 </div>
                             </div>
 
-
-                        </div>
-
-                        <div id='map' class="OFF">
-                            <div class="span12">
-                                <?php include_once("map.php"); ?>
+                            <div id='article'class="OFF">
+                                <p>
+                                    article
+                                </p>
                             </div>
-                        </div>
 
-                        <div id='article'class="OFF">
-                            <p>
-                                article
-                            </p>
-                        </div>
+                            <div id='lien'class="OFF">
+                                <p>
+                                    lien
+                                </p>
+                            </div>
 
-                        <div id='lien'class="OFF">
-                            <p>
-                                lien
-                            </p>
-                        </div>
-                   
+                       </div>
+                       <div class="clear"></div>
                     </div>
 
                 </div>

@@ -658,11 +658,11 @@ footer .span12 p {
 }
 
 .OFF{
-	visibility: hidden;
+	display: none;
 }
 
-#photo{
-	margin-top: 100px;
+#contenuIndice{
+	margin-top: 85px;
 }
 
 .rogneImg {

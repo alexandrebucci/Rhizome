@@ -24,7 +24,7 @@
     <style type="text/css">
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
-      #map-container{position:absolute; height:500px; width:100%;}
+      #map-container{position:relative; height:500px;}
       #map-canvas {  height: 100%; width: 100%; }
       #description {position: relative;}
     </style>
