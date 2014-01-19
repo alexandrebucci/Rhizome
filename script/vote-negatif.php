@@ -7,7 +7,7 @@
 	$score = $_POST["score"];
 	$id_etape = $_POST["id_etape"];
 	$Id_U = 0;
-	$newScore = $score + 1;
+	$newScore = $score - 1;
 
 	/**
 	 * Récupérer la véritable adresse IP d'un visiteur
@@ -53,8 +53,7 @@
 	      ":id" =>$id_etape
 	    ));
 
-	    //Ajout de la ligne dans la table vote_etape pour savoir si il a deja voté
-	    //Requete INSERT
+	    //Ajout de la ligne dans la table vote_etape pour savoir si l'utilisateur à deja voté
 		$req2 = $PDO->prepare('INSERT INTO vote_etape (`Id_E`, `Ip`) VALUES (:Id_E, :Ip)');
 	    //Asignation des valeurs
 	    $req2->execute(array(

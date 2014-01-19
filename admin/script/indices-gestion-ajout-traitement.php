@@ -66,7 +66,7 @@
 		} 
 	}
 
-	//Requete UPDATE
+	//Requete INSERT
 	$q = $PDO->prepare('INSERT INTO indice (`Type`, `Titre`, `Description`, `Photo`, `Date`, `Url`, `Lat`, `Long`, `Id_E`) VALUES (:Type, :Titre, :Description, :Photo, :Datee, :Url, :Lat, :Long, :id_E)');
     //Asignation des valeurs
     $q->execute(array(
