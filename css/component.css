@@ -40,6 +40,7 @@ section div a:focus {
 	margin: 0;
 	position: relative;
 	width: 84%;
+	float: left;
 }
 
 .cl-effect-10 a span {
@@ -155,6 +156,7 @@ section div a:focus {
 
 #fb img {
 	vertical-align: initial;
+	float: left;
 }
 
 #tw{
@@ -166,6 +168,7 @@ section div a:focus {
 
 #tw img {
 	vertical-align: initial;
+	float: left;
 }
 
 #yt{
@@ -177,6 +180,7 @@ section div a:focus {
 
 #yt img {
 	vertical-align: initial;
+	float: left;
 }
 
 #fl{
@@ -188,5 +192,7 @@ section div a:focus {
 
 #fl img {
 	vertical-align: initial;
+	float: left;
 }
+
 
