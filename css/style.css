@@ -210,6 +210,10 @@ p {
     height: 100%;
 }
 
+#mentions_legales a{
+	color: #AD1F1F;
+}
+
 .main_right_home ul {
 	list-style-type: none;
 }
