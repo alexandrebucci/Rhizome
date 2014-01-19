@@ -219,7 +219,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <p>Flick</p>
+                                    <p>Flickr</p>
                                 </a>
                             </li>
                             <li>
