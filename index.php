@@ -1,6 +1,6 @@
 <?php
     require_once("datas/parametres.php");
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -40,10 +40,12 @@
                                     <div class="span7" id="menulist">
                                         <ul id="menu_horizontal">
                                             <li><a href="accueil.php">Accueil</a></li>
-                                            <li class="x_separate">X
+                                            <li class="x_separate">
+                                                <img src="img/x/blanc.svg" alt="x blanc">
                                             <li>
                                             <li><a href="news.php">Histoire</a></li>
-                                            <li class="x_separate">X
+                                            <li class="x_separate">
+                                                <img src="img/x/blanc.svg" alt="x blanc">
                                             <li>
                                             <li><a href="livreor.php">Étapes</a></li>
                                         </ul>
@@ -91,12 +93,12 @@
                         foreach ($resultat0 as $donnees) {
                             # code...
                         }
-                    ?>
+                        ?>
                     <h2><?php echo $donnees['Titre'];?></h2>
                     <h3><?php echo $donnees['Date'];?></h3>
                     <div id="home_video">
-                       <!--  <iframe width="640" height="360" src="//www.youtube.com/embed/5uRN7iJ5CqQ" frameborder="0" allowfullscreen></iframe> -->
-                       <?php echo $donnees['Video'];?>
+                        <!--  <iframe width="640" height="360" src="//www.youtube.com/embed/5uRN7iJ5CqQ" frameborder="0" allowfullscreen></iframe> -->
+                        <?php echo $donnees['Video'];?>
                     </div>
                     <div class="home_resume">
                         <h2>Résumé</h2>
@@ -109,53 +111,59 @@
                     <section class="color-10">
                         <div class="cl-effect-10">
                             <div id="fb">
-                                <img src="img/fb.svg"><a href="#" target="_blank" data-hover="Facebook"><span>Facebook</span></a>
+                                <a href="#" target="_blank" data-hover="Facebook"><img src="img/fb.svg"><span>Facebook</span></a>
                             </div>
                             <div id="tw">
-                                <img src="img/tw.svg"><a href="#" target="_blank" data-hover="Twitter"><span>Twitter</span></a>
+                                <a href="#" target="_blank" data-hover="Twitter"><img src="img/tw.svg"><span>Twitter</span></a>
                             </div>
                             <div id="yt">
-                                <img src="img/yt.svg"><a href="#" target="_blank" data-hover="Youtube"><span>Youtube</span></a>
+                                <a href="#" target="_blank" data-hover="Youtube"><img src="img/yt.svg"><span>Youtube</span></a>
                             </div>
                             <div id="fl">
-                                <img src="img/fl.svg"><a href="#" target="_blank" data-hover="Flickr"><span>Flickr</span></a>
+                                <a href="#" target="_blank" data-hover="Flickr"><img src="img/fl.svg"><span>Flickr</span></a>
                             </div>
                         </div>
                     </section>
+                    <div id="lot">
+                        <img src="img/cadeau.png" alt="cadeau">
+                        <p>Je suis prêt à vous récompenser à l’issue du jeu à travers un 
+                            tirage au sort réunnissant les participants les plus méritants 
+                            alors à vos loupes.</p>
+                        <p><a href="#">Voir les conditions</a><p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid avancement">
-            <div class="row-fluid">
-                <div class="span12">
-                    <h1>Nous avons progressé</h1>
-                    <div class="row-fluid">
-                        <div class="span4 offset4">
-                            <div class="hr_chelou"></div>
-                        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <h1>Nous avons progressé</h1>
+                <div class="row-fluid">
+                    <div class="span4 offset4">
+                        <div class="hr_chelou"></div>
                     </div>
-                    <div class="liste-etapes">
-                        <div class="row-fluid">
+                </div>
+                <div class="liste-etapes">
+                    <div class="row-fluid">
                         <?php
-                        /*
-                        *   Pour l'affichage on ouvre un row ensuite lorsqu'on a affiché 3 etapes ($i%3 == 0)
-                        *   On ferme le row et on ouvre le suivant
-                        *   On compte avec $i qui vaut 1 au début et qu'on incrémente à chaque foreach
-                        */
-                            $i = 1;
-                            //requete affichage de l'étape en cours
-                            $req1 = $PDO->prepare("SELECT * FROM `etape` WHERE `Id_E` NOT IN (SELECT MAX(`Id_E`) FROM `etape`) ORDER BY `Id_E` DESC ");
-                            $req1->execute();
-                            $resultat1 = $req1->fetchAll(PDO::FETCH_ASSOC);
-                            foreach ($resultat1 as $donnees) {
-                         ?>
-                        
+                            /*
+                            *   Pour l'affichage on ouvre un row ensuite lorsqu'on a affiché 3 etapes ($i%3 == 0)
+                            *   On ferme le row et on ouvre le suivant
+                            *   On compte avec $i qui vaut 1 au début et qu'on incrémente à chaque foreach
+                            */
+                                $i = 1;
+                                //requete affichage de l'étape en cours
+                                $req1 = $PDO->prepare("SELECT * FROM `etape` WHERE `Id_E` NOT IN (SELECT MAX(`Id_E`) FROM `etape`) ORDER BY `Id_E` DESC ");
+                                $req1->execute();
+                                $resultat1 = $req1->fetchAll(PDO::FETCH_ASSOC);
+                                foreach ($resultat1 as $donnees) {
+                             ?>
                         <div class="span4">
                             <div class="etape">
                                 <div class="rond_etape">
                                     <h4><?php echo $donnees['Id_E'];?></h4>
                                 </div>
-                                <h4>X <?php echo $donnees['Titre'];?> X</h4>
+                                <h4><img src="img/x/noir.svg" alt="x noir"> <?php echo $donnees['Titre'];?> <img src="img/x/noir.svg" alt="x noir"></h4>
                                 <p><?php echo $donnees['ResumeCourt'];?></p>
                                 <a href="etapes.php?etape=<?php echo $donnees['Id_E'];?>">Accéder à cette étape</a>
                             </div>
@@ -166,14 +174,14 @@
                                 echo"<div class='row-fluid'>";
                             }
                             $i++;
-                        ?>
+                            ?>
                         <?php
                             }
-                        ?>
-
+                            ?>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         <div class="container-fluid partenaires">
             <div class="row-fluid">
@@ -207,7 +215,9 @@
                                 </a>
                             </li>
                             <li>
-                                <p>X</p>
+                                <p class="x_footer">
+                                    <img src="img/x/blanc.svg" alt="x blanc">
+                                </p>
                             </li>
                             <li>
                                 <a href="#">
@@ -215,7 +225,9 @@
                                 </a>
                             </li>
                             <li>
-                                <p>X</p>
+                                <p class="x_footer">
+                                    <img src="img/x/blanc.svg" alt="x blanc">
+                                </p>
                             </li>
                             <li>
                                 <a href="#">
@@ -223,7 +235,9 @@
                                 </a>
                             </li>
                             <li>
-                                <p>X</p>
+                                <p class="x_footer">
+                                    <img src="img/x/blanc.svg" alt="x blanc">
+                                </p>
                             </li>
                             <li>
                                 <a href="#">
@@ -231,7 +245,9 @@
                                 </a>
                             </li>
                             <li>
-                                <p>X</p>
+                                <p class="x_footer">
+                                    <img src="img/x/blanc.svg" alt="x blanc">
+                                </p>
                             </li>
                             <li>
                                 <a href="#">
@@ -257,7 +273,6 @@
     </body>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/switch_div.js"></script>
-    
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
 </html>

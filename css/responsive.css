@@ -126,7 +126,7 @@
 
 	.cl-effect-10 a {
 		margin: 0 !important;
-		width: 248px;
+		width: 100%;
 	}
 
 	.cl-effect-10 div {
@@ -137,7 +137,7 @@
 	}
 
 	.etape {
-		width: 300px!important;
+		width: 94%!important;
 		height: 108px !important;
 	}
 
@@ -150,6 +150,11 @@
 		display: none;
 	}
 
+	#lot {
+		width: 94% !important;
+		margin: auto!important;
+	}
+
 	.partenaires .span2 a img {
 		width: 70% !important;
 	}
@@ -160,12 +165,22 @@
 	}
 
 	footer li {
-		font-size: 9px;
+		font-size: 10px;
 	}
 
 	footer ul {
-		width: 400px!important;
-		margin: 0px auto 10px auto !important;
+		text-align: center;
+		list-style-type: none;
+		margin-left: 0;
+		padding-top: 15px;
+	}
+
+	footer ul li a{
+		color: #fff;
+	}
+
+	footer ul li img {
+		display: none;
 	}
 
 	footer ul li p {
@@ -224,7 +239,7 @@
 
 	.cl-effect-10 a{
 		margin-left: 0 !important;
-		width: 387px;
+		width: 100%;
 		margin-right: 0 !important;
 	}
 
@@ -320,6 +335,11 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070707', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 	}
 
+	#lot {
+		width: 92% !important;
+		margin: auto !important;
+	}
+
 	.partenaires .span2 a img {
 		width: 70% !important;
 	}
@@ -334,12 +354,22 @@
 	}
 
 	footer ul {
-		width: 400px!important;
-		margin: 0px auto 10px auto !important;
+		text-align: center;
+		list-style-type: none;
+		margin-left: 0;
+		padding-top: 15px;
+	}
+
+	footer ul li a{
+		color: #fff;
+	}
+
+	footer ul li img {
+		display: none;
 	}
 
 	footer ul li p {
-		margin: 0 0 0 0px !important;
+		margin: 0 0 8px 0px !important;
 	}
 
 	footer a {
@@ -455,9 +485,14 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070707', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 	}
 
+	#lot {
+		width: 97% !important;
+		margin: auto;
+	}
+
 	.cl-effect-10 a {
 		margin: 0 !important;
-		width: 568px;
+		width: 100%;
 	}
 
 	.cl-effect-10 div {
@@ -468,7 +503,7 @@
 	}
 
 	.etape {
-		width: 90% !important;
+		width: 97% !important;
 	}
 
 	body .etape a {
@@ -485,19 +520,27 @@
 		width: 50% !important;
 	}
 
-	
-
 	footer li {
-		font-size: 13px;
+		font-size: 16px;
 	}
 
 	footer ul {
-		width: 400px!important;
-		margin: 0px auto 10px auto !important;
+		text-align: center;
+		list-style-type: none;
+		margin-left: 0;
+		padding-top: 15px;
+	}
+
+	footer ul li a{
+		color: #fff;
+	}
+
+	footer ul li img {
+		display: none;
 	}
 
 	footer ul li p {
-		margin: 0 0 0 0px !important;
+		margin: 0 0 10px 0px !important;
 	}
 
 	footer a {
@@ -522,7 +565,11 @@
 		margin-left: 20px !important;
 	}
 	.cl-effect-10 a {
-		width: 76%;
+		width: 100%;
+	}
+
+	#lot p{
+		font-size: 1em!important;
 	}
 
 	.etape {
@@ -545,7 +592,7 @@
 @media only screen and (max-width: 1110px) and (min-width: 980px){
 	
 	.cl-effect-10 a {
-		width: 82%;
+		width: 100%;
 	}
 
 	.etape a {
