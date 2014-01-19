@@ -103,9 +103,9 @@ header .span3 a:active {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background:url(../img/photos/ban.jpg);
-	background-position-y: 55%; 
 	border-bottom: 5px solid #AD1F1F;
 	background-size: 100%;
+	background-position: 0 55%; 
 }
 /* Menu de la home */
 

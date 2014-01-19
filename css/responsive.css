@@ -97,8 +97,7 @@
 	}
 
 	.ban {
-		/*background-position-y: 66% !important; 
-		background-position-x: 44% !important; */
+		background-position:44% 66% !important; 
 		background-size: 190% !important;
 
 	}
