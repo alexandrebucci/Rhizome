@@ -588,9 +588,35 @@ footer .span12 p {
 	transition: all 0.3s ease-in-out;
 
 }
+
+
+.tt-wrapper li span.active{
+	width: 100px;
+	height: auto;
+	line-height: 20px;
+	padding: 10px;
+	left: 50%;
+	margin-left: -60px;
+	font-family: bitter;
+	color: #E6E6E6;
+	text-align: center;
+	background: #A51D1D;
+	text-indent: 0px;
+	border-radius: 5px;
+	position: absolute;
+	pointer-events: none;
+	bottom: -60px;
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+
+}
 .tt-wrapper li span:before,
 .tt-wrapper li span:after{
-	content: '';
+	content:'';
 	position: absolute;
 	bottom: -15px;
 	left: 50%;
@@ -599,12 +625,28 @@ footer .span12 p {
 	height: 0;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
+		-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
+
+
+
 .tt-wrapper li span:after{
 	bottom: 40px;
 	margin-left: -10px;
 	border-bottom: 10px solid #E6E6E6;
 }
+
+#photo_btn span.activeAfter:after,
+#map_btn span.activeAfter:after,
+#article_btn span.activeAfter:after,
+#lien_btn span.activeAfter:after {
+  	border-bottom: 10px solid #A51D1D;
+}
+
 .tt-wrapper li:hover span{
 	bottom: -60px;
 	opacity: 1;

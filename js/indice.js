@@ -1,11 +1,26 @@
 $(document).ready(function(){
 	console.log("document chargé");
+
+	
+		// on active le titre
+		$('#photo_btn span').addClass('active');
+		$('#photo_btn span').addClass('activeAfter');
+
 	$('#photo_btn').click(function(){
 		console.log("bouton photo");
 		$('#photo').removeClass('OFF').addClass('ON');
 		$('#map').removeClass('ON').addClass('OFF');
 		$('#article').removeClass('ON').addClass('OFF');
 		$('#lien').removeClass('ON').addClass('OFF');
+
+		// on desactive les autres titre
+		$('.tt-wrapper span').removeClass('active');
+		$('.tt-wrapper span').removeClass('activeAfter');
+		
+		// on active le titre
+		$('#photo_btn span').addClass('active');
+		$('#photo_btn span').addClass('activeAfter');
+		
 
 		return false;
 	});
@@ -16,6 +31,15 @@ $(document).ready(function(){
 		$('#map').removeClass('OFF').addClass('ON');
 		$('#article').removeClass('ON').addClass('OFF');
 		$('#lien').removeClass('ON').addClass('OFF');
+
+		// on desactive les autres titre
+		$('.tt-wrapper span').removeClass('active');
+		$('.tt-wrapper span').removeClass('activeAfter');
+		
+		// on active le titre
+		$('#map_btn span').addClass('active');
+		$('#map_btn span').addClass('activeAfter');
+
 		return false;
 	});
 
@@ -25,6 +49,16 @@ $(document).ready(function(){
 		$('#map').removeClass('ON').addClass('OFF');
 		$('#article').removeClass('OFF').addClass('ON');
 		$('#lien').removeClass('ON').addClass('OFF');
+
+				// on desactive les autres titre
+		$('.tt-wrapper span').removeClass('active');
+		$('.tt-wrapper span').removeClass('activeAfter');
+		
+		// on active le titre
+		$('#article_btn span').addClass('active');
+		$('#article_btn span').addClass('activeAfter');
+		
+
 		return false;
 	});
 
@@ -34,6 +68,16 @@ $(document).ready(function(){
 		$('#map').removeClass('ON').addClass('OFF');
 		$('#article').removeClass('ON').addClass('OFF');
 		$('#lien').removeClass('OFF').addClass('ON');
+
+		// on desactive les autres titre
+		$('.tt-wrapper span').removeClass('active');
+		$('.tt-wrapper span').removeClass('activeAfter');
+		
+		// on active le titre
+		$('#lien_btn span').addClass('active');
+		$('#lien_btn span').addClass('activeAfter');
+		
+
 		return false;
 	});
 });

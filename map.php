@@ -24,8 +24,8 @@
     <style type="text/css">
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
-      #map-container{position:relative; height:90%; width:100%;}
-      #map-canvas {  height: 100% }
+      #map-container{position:absolute; height:500px; width:100%;}
+      #map-canvas {  height: 100%; width: 100%; }
       #description {position: relative;}
     </style>
 
@@ -45,7 +45,11 @@
         //Options de la carte
         var mapOptions = {
           center: new google.maps.LatLng(47.5099792, 6.8016417),
-          zoom: 15
+          zoom: 15,
+          scrollwheel: false,
+          scaleControl: true,
+          panControl: true,
+          mapTypeControl: true
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
