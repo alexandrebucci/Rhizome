@@ -6,8 +6,13 @@
   //Windows
   //define("PASSWD_DB","");
   //Mac
+<<<<<<< HEAD
   //define("PASSWD_DB","password");
   define("PASSWD_DB","root");
+=======
+  define("PASSWD_DB","password");
+  //define("PASSWD_DB","root");
+>>>>>>> 32a1a895538431da6a14624db29333deb12a86b9
 
   //VERSION EN LIGNE
   /*define("HOST_DB","mysql51-79.perso");
