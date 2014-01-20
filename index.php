@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/component.css" type="text/css" media="all">
-        <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all">
+        
         <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="all">
         <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
@@ -21,6 +21,7 @@
         <!-- Style
             ================================================== -->
         <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all">
     </head>
     <body>
         <header>
@@ -126,8 +127,10 @@
                     </section>
                     <div id="lot">
                         <img src="img/cadeau.png" alt="cadeau">
+                        <h3>Cadeaux</h3>
+                        <span>à gagner</span>
                         <p>Je suis prêt à vous récompenser à l’issue du jeu à travers un 
-                            tirage au sort réunnissant les participants les plus méritants 
+                            tirage au sort réunissant les participants les plus méritants, 
                             alors à vos loupes.</p>
                         <p><a href="#">Voir les conditions</a><p>
                     </div>

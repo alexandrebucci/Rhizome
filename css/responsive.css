@@ -399,16 +399,20 @@
 		margin-left: 20px;
 		margin-right: 20px;
 	}
-	#menu_barre {
+	/*#menu_barre {
 		display: none;
-	}
+	}*/
 
+	.home_resume a {
+		margin: auto !important;
+	}
+/*
 	#menu_mobile {
 		display: block !important;
 		position: absolute;
 		top: 0;
 		width: 100%;
-	}
+	}*/
 
 	.ban .span6 p {
 		text-shadow:2px 2px 1px rgba(0,0,0,.8);
