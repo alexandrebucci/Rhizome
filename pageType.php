@@ -142,16 +142,16 @@
                     <section class="color-10">
                         <div class="cl-effect-10">
                             <div id="fb">
-                                <img src="img/fb.svg"><a href="#" target="_blank" data-hover="Facebook"><span>Facebook</span></a>
+                                <a href="#" target="_blank" data-hover="Facebook"><img src="img/fb.svg"><span>Facebook</span></a>
                             </div>
                             <div id="tw">
-                                <img src="img/tw.svg"><a href="#" target="_blank" data-hover="Twitter"><span>Twitter</span></a>
+                                <a href="#" target="_blank" data-hover="Twitter"><img src="img/tw.svg"><span>Twitter</span></a>
                             </div>
                             <div id="yt">
-                                <img src="img/yt.svg"><a href="#" target="_blank" data-hover="Youtube"><span>Youtube</span></a>
+                                <a href="#" target="_blank" data-hover="Youtube"><img src="img/yt.svg"><span>Youtube</span></a>
                             </div>
                             <div id="fl">
-                                <img src="img/fl.svg"><a href="#" target="_blank" data-hover="Flickr"><span>Flickr</span></a>
+                                <a href="#" target="_blank" data-hover="Flickr"><img src="img/fl.svg"><span>Flickr</span></a>
                             </div>
                         </div>
                     </section>
@@ -178,63 +178,114 @@
                         <div class="clear"></div>
                         <div id="contenuIndice">
                             <div id='photo'class="OFF">
-                             <div class="row-fluid">
-                                <div class="span3">
-                                    <div class="rogneImg">
-                                     <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
-                                        <p>18/10/2013</p>
-                                        <a href="#">Flickr</a>
+                                <div class="row-fluid">
+                                    <div class="span3">
+                                        <div class="rogneImg">
+                                            <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
+                                            <p>18/10/2013</p>
+                                            <a href="#">Flickr</a>
+                                        </div>
                                     </div>
-                                    
-                                </div>
-                                <div class="span3">
-                                    <div class="rogneImg">
-                                     <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
-                                        <p>18/10/2013</p>
-                                        <a href="#">Flickr</a>
+                                    <div class="span3">
+                                        <div class="rogneImg">
+                                            <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
+                                            <p>18/10/2013</p>
+                                            <a href="#">Flickr</a>
+                                        </div>                                   
                                     </div>
-                                    
-                                </div>
-                                
-                                <div class="span3">
-                                    <div class="rogneImg">
-                                        <div class="proposeImg">
-                                            <h1>Propose moi d’autres photos à travers tes commentaires. Elles peuvent s’avérer utiles.</h1>
+                                    <div class="span3">
+                                        <div class="rogneImg">
+                                            <div class="proposeImg">
+                                                <h2>Propose moi d’autres photos à travers tes commentaires. Elles peuvent s’avérer utiles.</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span3">
+                                        <div class="rogneImg">
+                                            <div class="blackImg"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="span3">
-                                    <div class="rogneImg">
-                                        <div class="blackImg"></div>
-                                    </div>
-                                </div>
-                                </div>
-
-
+                                <br />
                             </div>
 
                             <div id='map' class="ON">
-                            <div class="row-fluid">
-                                <div class="span12">
-                                    <?php include_once("map.php"); ?>
-                                </div>
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <?php include_once("map.php"); ?>
+                                    </div>
                                 </div>
                             </div>
 
                             <div id='article'class="OFF">
-                                <p>
-                                    article
-                                </p>
+                               <div class="row-fluid">
+                                    <div class="span3">
+                                        <div class="rogneImg">
+                                            <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
+                                            <a class="titre-article" href="#">L'assassinat de monsieur Martinez</a>
+                                            <p>18/10/2013</p>
+                                        </div>
+                                    </div>
+                                    <div class="span3">
+                                        <div class="rogneImg">
+                                            <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
+                                            <a class="titre-article" href="#">L'assassinat de monsieur Martinez</a>
+                                            <p>18/10/2013</p>
+                                        </div>                                   
+                                    </div>
+                                    <div class="span3">
+                                        <div class="rogneImg">
+                                            <div class="proposeImg">
+                                                <h2>Propose moi d’autres photos d'articles à travers tes commentaires. Elles peuvent s’avérer utiles.</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span3">
+                                        <div class="rogneImg">
+                                            <div class="blackImg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
                             </div>
 
                             <div id='lien'class="OFF">
-                                <p>
-                                    lien
-                                </p>
+                               <div class="row-fluid">
+                                    <div class="span6">
+                                        <div class="info-liens">
+                                            <a href="#">
+                                                <h2>L'assassinat de monsieur Martinez</h2>
+                                                <p>Source</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="span6">
+                                        <div class="info-liens">
+                                            <a href="#">
+                                                <h2>L'assassinat de monsieur Martinez</h2>
+                                                <p>Source</p>
+                                            </a>
+                                        </div>                                
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <div class="rogneLiens">
+                                            <div class="proposeImg">
+                                                <h2>Aucune source internet pertinente n’a été découverte. Si tu en trouves envoie-les par commentaire.</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span6">
+                                        <div class="rogneLiens">
+                                            <div class="blackImg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
                             </div>
-
-                       </div>
-                       <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
                     </div>
 
                 </div>
@@ -328,5 +379,5 @@
         })();
     </script>
     <!-- lightBox -->
-      <script type="text/javascript" src="lightBox/jquery.fancybox.js?v=2.1.5"></script>/*
+      <script type="text/javascript" src="lightBox/jquery.fancybox.js?v=2.1.5"></script>
 </html>

@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données: `incognito`
 --
-CREATE DATABASE IF NOT EXISTS `incognito` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `incognito`;
+CREATE DATABASE IF NOT EXISTS `kilyansogerals` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `kilyansogerals`;
 
 -- --------------------------------------------------------
 

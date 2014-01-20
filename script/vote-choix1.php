@@ -46,7 +46,7 @@
     }
     else{
     	//Modification du score dans la BDD
-    	$req1 = $PDO->prepare('UPDATE etape SET `vote`=:score WHERE `id_E` = :id');
+    	$req1 = $PDO->prepare('UPDATE etape SET `choix1`=:score WHERE `id_E` = :id');
 	    //Asignation des valeurs
 	    $req1->execute(array(
 	      ":score" => $newScore,
