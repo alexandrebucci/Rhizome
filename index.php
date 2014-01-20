@@ -60,7 +60,7 @@
                                 <a href="#" id="logo_mobile"><img src="img/mobile/logo.svg" alt="logomobile"></a>
                             </div>
                             <div id="mobile_menu_droite">
-                                <a href="#" id="menu_a_mobile"><img src="img/mobile/menu.svg" alt="menu"></a>
+                                <a ref="#"  id="menu_a_mobile"><img src="img/mobile/menu.svg" alt="menu"></a>
                                 <div id="rubriques">
                                     <ul>
                                         <li>Histoire</li>
