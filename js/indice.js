@@ -23,6 +23,14 @@ $(document).ready(function(){
 		
 
 		return false;
+
+		// size image rogne
+		var cw = $('.rogneImg').width();
+		$('.rogneImg').css({'height':cw+'px'});
+		$( window ).resize(function() {
+			var cw = $('.rogneImg').width();
+			$('.rogneImg').css({'height':cw+'px'});
+		});
 	});
 
 	$('#map_btn').click(function(){
@@ -39,6 +47,12 @@ $(document).ready(function(){
 		// on active le titre
 		$('#map_btn span').addClass('active');
 		$('#map_btn span').addClass('activeAfter');
+
+		$( window ).resize(function() {
+			var rogne2 = $('#description img').height();
+			console.log(rogne2);
+			$('#descriptionLieu').css({'height':(rogne2-15)+'px'});
+		});
 
 		return false;
 	});
@@ -60,6 +74,14 @@ $(document).ready(function(){
 		
 
 		return false;
+
+		// size image rogne
+		var cw = $('.rogneImg').width();
+		$('.rogneImg').css({'height':cw+'px'});
+		$( window ).resize(function() {
+			var cw = $('.rogneImg').width();
+			$('.rogneImg').css({'height':cw+'px'});
+		});
 	});
 
 	$('#lien_btn').click(function(){
@@ -79,29 +101,5 @@ $(document).ready(function(){
 		
 
 		return false;
-	});
-});
-$(document).ready(function(){
-	// size image rogne
-	var cw = $('.rogneImg').width();
-	$('.rogneImg').css({'height':cw+'px'});
-
-	$( window ).resize(function() {
-		var cw = $('.rogneImg').width();
-		$('.rogneImg').css({'height':cw+'px'});
-	});
-});
-
-$(document).ready(function(){
-	// size image rogne img lieu
-	var rogne2 = $('#descriptionLieu').height();
-		console.log(rogne2);
-		$('.rogneImg2').css({'height':(rogne2+15)+'px'});
-
-	$( window ).resize(function() {
-
-		var rogne2 = $('#descriptionLieu').height();
-		console.log(rogne2);
-		$('.rogneImg2').css({'height':(rogne2+15)+'px'});
 	});
 });
