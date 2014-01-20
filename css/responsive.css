@@ -201,15 +201,15 @@
 
 	/* Page Type */
 	.info-liens a{
-		padding: 0em;
+		padding: 0em !important;
 	}
 
 	.info-liens h2{
-		font-size: 16px;
+		font-size: 16px !important;
 	}
 
 	.proposeImg h2{
-		font-size: 15px;
+		font-size: 15px !important;
 		line-height: 23px;
 	}
 
@@ -389,15 +389,15 @@
 
 	/* Page Type */
 	.info-liens a{
-		padding: 0.5em 0em 0em 0em;
+		padding: 0.5em 0em 0em 0em !important;
 	}
 
 	.info-liens h2{
-		font-size: 21px;
+		font-size: 21px !important;
 	}
 
 	.proposeImg h2{
-		font-size: 21px;
+		font-size: 21px !important;
 		line-height: 32px;
 	}
 }
@@ -611,15 +611,15 @@
 
 	/* Page Type */
 	.info-liens a{
-		padding: 0.5em 0em 0em 0.7em;
+		padding: 0.5em 0em 0em 0.7em !important;
 	}
 
 	.info-liens h2{
-		font-size: 20px;
+		font-size: 20px !important;
 	}
 
 	.proposeImg h2{
-		font-size: 21px;
+		font-size: 21px !important;
 		line-height: 30px;
 	}
 }
@@ -679,6 +679,34 @@
 	.ban .span6 p {
 		text-shadow:2px 2px 1px rgba(0,0,0,.8);
 	} 
+
+	/* Page Type */
+	.info-liens a{
+		padding: 0.5em 0em 0em 1.7em !important;
+	}
+
+	.info-liens h2{
+		font-size: 22px !important;
+	}
+
+	.proposeImg h2{
+		font-size: 23px !important;
+		line-height: 40px;
+	}
+
+	/* Page Type */
+	.info-liens a{
+		padding: 0.5em 0em 0em 1em !important;
+	}
+
+	.info-liens h2{
+		font-size: 18px !important;
+	}
+
+	.proposeImg h2{
+		font-size: 17px !important;
+		line-height: 30px;
+	}
 }
 
 @media only screen and (max-width: 1110px) and (min-width: 980px){
@@ -693,5 +721,19 @@
 
 	.etape {
 		height: 215px !important;
+	}
+
+	/* Page Type */
+	.info-liens a{
+		padding: 0.5em 0em 0em 1.7em !important;
+	}
+
+	.info-liens h2{
+		font-size: 22px !important;
+	}
+
+	.proposeImg h2{
+		font-size: 20px !important;
+		line-height: 40px;
 	}
 }
