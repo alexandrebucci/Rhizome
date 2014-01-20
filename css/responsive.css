@@ -208,9 +208,32 @@
 		font-size: 16px !important;
 	}
 
+	.proposeLien h2{
+		font-size: 15px !important;
+		line-height: 23px;
+	}
+
 	.proposeImg h2{
 		font-size: 15px !important;
 		line-height: 23px;
+	}
+
+	.rogneArt {
+		height: auto !important;
+		margin-bottom: 20px;
+	}
+
+	.rogneImg {
+		height: auto !important;
+		margin-bottom: 20px;
+	}
+
+	#blackArt{
+		display:none;
+	}
+
+	#blackPho{
+		display:none;
 	}
 
 }
@@ -396,9 +419,32 @@
 		font-size: 21px !important;
 	}
 
+	.proposeLien h2{
+		font-size: 21px !important;
+		line-height: 32px;
+	}
+
 	.proposeImg h2{
 		font-size: 21px !important;
 		line-height: 32px;
+	}
+
+	.rogneArt {
+		height: auto !important;
+		margin-bottom: 20px;
+	}
+
+	.rogneImg {
+		height: auto !important;
+		margin-bottom: 20px;
+	}
+
+	#blackArt{
+		display:none;
+	}
+
+	#blackPho{
+		display:none;
 	}
 }
 
@@ -618,9 +664,32 @@
 		font-size: 20px !important;
 	}
 
+	.proposeLien h2{
+		font-size: 21px !important;
+		line-height: 30px;
+	}
+
 	.proposeImg h2{
 		font-size: 21px !important;
 		line-height: 30px;
+	}
+
+	.rogneArt {
+		height: auto !important;
+		margin-bottom: 20px;
+	}
+
+	.rogneImg {
+		height: auto !important;
+		margin-bottom: 20px;
+	}
+
+	#blackArt{
+		display:none;
+	}
+
+	#blackPho{
+		display:none;
 	}
 }
 
@@ -682,20 +751,6 @@
 
 	/* Page Type */
 	.info-liens a{
-		padding: 0.5em 0em 0em 1.7em !important;
-	}
-
-	.info-liens h2{
-		font-size: 22px !important;
-	}
-
-	.proposeImg h2{
-		font-size: 23px !important;
-		line-height: 40px;
-	}
-
-	/* Page Type */
-	.info-liens a{
 		padding: 0.5em 0em 0em 1em !important;
 	}
 
@@ -703,9 +758,14 @@
 		font-size: 18px !important;
 	}
 
-	.proposeImg h2{
+	.proposeLien h2{
 		font-size: 17px !important;
 		line-height: 30px;
+	}
+
+	.proposeImg h2{
+		font-size: 13px !important;
+		line-height: 20px;
 	}
 }
 
@@ -732,8 +792,13 @@
 		font-size: 22px !important;
 	}
 
-	.proposeImg h2{
+	.proposeLien h2{
 		font-size: 20px !important;
 		line-height: 40px;
+	}
+
+	.proposeImg h2{
+		font-size: 20px !important;
+		line-height: 31px;
 	}
 }

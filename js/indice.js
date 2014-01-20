@@ -20,9 +20,6 @@ $(document).ready(function(){
 		// on active le titre
 		$('#photo_btn span').addClass('active');
 		$('#photo_btn span').addClass('activeAfter');
-		
-
-		return false;
 
 		// size image rogne
 		var cw = $('.rogneImg').width();
@@ -31,6 +28,8 @@ $(document).ready(function(){
 			var cw = $('.rogneImg').width();
 			$('.rogneImg').css({'height':cw+'px'});
 		});
+
+		return false;
 	});
 
 	$('#map_btn').click(function(){
@@ -71,17 +70,16 @@ $(document).ready(function(){
 		// on active le titre
 		$('#article_btn span').addClass('active');
 		$('#article_btn span').addClass('activeAfter');
-		
-
-		return false;
 
 		// size image rogne
-		var cw = $('.rogneImg').width();
-		$('.rogneImg').css({'height':cw+'px'});
+		var cw = $('.rogneArt').width();
+		$('.rogneArt').css({'height':cw+'px'});
 		$( window ).resize(function() {
-			var cw = $('.rogneImg').width();
-			$('.rogneImg').css({'height':cw+'px'});
+			var cw = $('.rogneArt').width();
+			$('.rogneArt').css({'height':cw+'px'});
 		});
+
+		return false;
 	});
 
 	$('#lien_btn').click(function(){

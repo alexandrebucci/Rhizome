@@ -183,14 +183,14 @@
                                         <div class="rogneImg">
                                             <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
                                             <p>18/10/2013</p>
-                                            <a href="#">Flickr</a>
+                                            <a class="sourcePho" href="#">Flickr</a>
                                         </div>
                                     </div>
                                     <div class="span3">
                                         <div class="rogneImg">
                                             <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
                                             <p>18/10/2013</p>
-                                            <a href="#">Flickr</a>
+                                            <a class="sourcePho" href="#">Flickr</a>
                                         </div>                                   
                                     </div>
                                     <div class="span3">
@@ -201,7 +201,7 @@
                                         </div>
                                     </div>
                                     <div class="span3">
-                                        <div class="rogneImg">
+                                        <div  id="blackPho" class="rogneImg">
                                             <div class="blackImg"></div>
                                         </div>
                                     </div>
@@ -220,28 +220,26 @@
                             <div id='article'class="OFF">
                                <div class="row-fluid">
                                     <div class="span3">
-                                        <div class="rogneImg">
+                                        <div class="rogneArt">
                                             <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
                                             <a class="titre-article" href="#">L'assassinat de monsieur Martinez</a>
                                             <p>18/10/2013</p>
                                         </div>
                                     </div>
                                     <div class="span3">
-                                        <div class="rogneImg">
+                                        <div class="rogneArt">
                                             <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
                                             <a class="titre-article" href="#">L'assassinat de monsieur Martinez</a>
                                             <p>18/10/2013</p>
                                         </div>                                   
                                     </div>
                                     <div class="span3">
-                                        <div class="rogneImg">
-                                            <div class="proposeImg">
-                                                <h2>Propose moi d’autres photos d'articles à travers tes commentaires. Elles peuvent s’avérer utiles.</h2>
-                                            </div>
+                                        <div id="proposeArt" class="proposeImg">
+                                            <h2>Propose moi d’autres photos d'articles à travers tes commentaires. Elles peuvent s’avérer utiles.</h2>
                                         </div>
                                     </div>
                                     <div class="span3">
-                                        <div class="rogneImg">
+                                        <div id="blackArt" class="rogneArt">
                                             <div class="blackImg"></div>
                                         </div>
                                     </div>
@@ -270,10 +268,8 @@
                                 </div>
                                 <div class="row-fluid">
                                     <div class="span6">
-                                        <div class="rogneLiens">
-                                            <div class="proposeImg">
-                                                <h2>Aucune source internet pertinente n’a été découverte. Si tu en trouves envoie-les par commentaire.</h2>
-                                            </div>
+                                        <div class="proposeLien">
+                                            <h2>Aucune source internet pertinente n’a été découverte. Si tu en trouves envoie-les par commentaire.</h2>
                                         </div>
                                     </div>
                                     <div class="span6">

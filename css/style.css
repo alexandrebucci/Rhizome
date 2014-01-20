@@ -686,6 +686,25 @@ footer .span12 p {
     max-height: 100%;
 }
 
+.rogneArt {
+    text-align: center; /* ensures the image is always in the h-middle */
+    overflow: hidden; /* hide the cropped portion */
+    position: relative;
+}
+
+.rogneArt img {
+    position: relative; /* allows repositioning */
+    left: 100%; /* move the whole width of the image to the right */
+    margin-left: -200%; /* magic! */
+    max-height: 100%;
+}
+
+#proposeArt {
+    text-align: center; /* ensures the image is always in the h-middle */
+    overflow: hidden; /* hide the cropped portion */
+    position: relative;
+}
+
 #photo p{
 	background-color: #E6E6E6;
 	width: 50%;
@@ -695,7 +714,7 @@ footer .span12 p {
 	bottom: -10px;
 }
 
-#photo a{
+.sourcePho{
 	background-color: #3A3A3A;
 	width: 50%;
 	float: left;
@@ -792,7 +811,7 @@ footer .span12 p {
     text-align: center; /* ensures the image is always in the h-middle */
     overflow: hidden; /* hide the cropped portion */
     position: relative;
-   	height: 166px !important;
+   	height: 166px;
 }
 
 .proposeImg{
@@ -802,6 +821,19 @@ footer .span12 p {
 
 
 .proposeImg h2{
+	color: #999999;
+	font-weight: 800;
+	font-size: 26px;
+	padding: 5px;
+}
+
+.proposeLien{
+	background-color: #575757;
+	border: solid 8px #3F3F3F;
+}
+
+
+.proposeLien h2{
 	color: #999999;
 	font-weight: 800;
 	font-size: 26px;
