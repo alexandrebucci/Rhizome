@@ -821,8 +821,26 @@ footer .span12 p {
 	margin-top: 30px;
 }
 
+#lot div {
+	display: block;
+	position: relative;
+	top: -170px;
+}
+
+#lot div h3 {
+	text-align: center;
+	font-size: 5.5em;
+}
+
+#lot div h4 {
+	font-weight: 100;
+	text-align: center;
+	font-size: 5.4em;
+	margin-top: 37px;
+}
+
 #lot p {
-	margin: 10px;
+	margin: -100px 10px;
 	font-size: 1.5em;
 	text-align: left;
 	line-height: 1.4em;
@@ -837,8 +855,8 @@ footer .span12 p {
 
 #lot a {
 	color: #808080;
-	margin: 10px;
-	padding-bottom: 8px;
+	margin: 110px 10px;
+	padding-bottom: 18px;
 	font-size: .7em;
 	display: block;
 }

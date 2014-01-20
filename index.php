@@ -11,7 +11,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/component.css" type="text/css" media="all">
-        
         <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="all">
         <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
@@ -56,17 +55,21 @@
                         </div>
                     </div>
                     <div id="menu_mobile">
-                        <div id="mobile_barre">
-                            <a href="#" id="logo_mobile"><img src="img/mobile/logo.svg" alt="logomobile"></a>
-                            <a href="#" id="menu_a_mobile"><img src="img/mobile/menu.svg" alt="menu"></a>
-                        </div>
-                        <div id="rubriques">
-                            <ul>
-                                <li>Histoire</li>
-                                <li>Étapes</li>
-                                <li>Flickr</li>
-                            </ul>
-                        </div>
+                        <!-- <div id="mobile_barre"> -->
+                            <div id="mobile_menu_gauche">
+                                <a href="#" id="logo_mobile"><img src="img/mobile/logo.svg" alt="logomobile"></a>
+                            </div>
+                            <div id="mobile_menu_droite">
+                                <a href="#" id="menu_a_mobile"><img src="img/mobile/menu.svg" alt="menu"></a>
+                                <div id="rubriques">
+                                    <ul>
+                                        <li>Histoire</li>
+                                        <li>Étapes</li>
+                                        <li>Flickr</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        <!-- </div> -->
                     </div>
                     <div class="row-fluid">
                         <div class="span6">
@@ -127,64 +130,68 @@
                     </section>
                     <div id="lot">
                         <img src="img/cadeau.png" alt="cadeau">
-                        <h3>Cadeaux</h3>
-                        <span>à gagner</span>
+                        <div>
+                            <h3>Cadeaux</h3>
+                            <h4>à gagner</h4>
+                        </div>
                         <p>Je suis prêt à vous récompenser à l’issue du jeu à travers un 
                             tirage au sort réunissant les participants les plus méritants, 
-                            alors à vos loupes.</p>
-                        <p><a href="#">Voir les conditions</a><p>
+                            alors à vos loupes.
+                        </p>
+                        <p><a href="#">Voir les conditions</a>
+                        <p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid avancement">
-        <div class="row-fluid">
-            <div class="span12">
-                <h1>Nous avons progressé</h1>
-                <div class="row-fluid">
-                    <div class="span4 offset4">
-                        <div class="hr_chelou"></div>
-                    </div>
-                </div>
-                <div class="liste-etapes">
+            <div class="row-fluid">
+                <div class="span12">
+                    <h1>Nous avons progressé</h1>
                     <div class="row-fluid">
-                        <?php
-                            /*
-                            *   Pour l'affichage on ouvre un row ensuite lorsqu'on a affiché 3 etapes ($i%3 == 0)
-                            *   On ferme le row et on ouvre le suivant
-                            *   On compte avec $i qui vaut 1 au début et qu'on incrémente à chaque foreach
-                            */
-                                $i = 1;
-                                //requete affichage de l'étape en cours
-                                $req1 = $PDO->prepare("SELECT * FROM `etape` WHERE `Id_E` NOT IN (SELECT MAX(`Id_E`) FROM `etape`) ORDER BY `Id_E` DESC ");
-                                $req1->execute();
-                                $resultat1 = $req1->fetchAll(PDO::FETCH_ASSOC);
-                                foreach ($resultat1 as $donnees) {
-                             ?>
-                        <div class="span4">
-                            <div class="etape">
-                                <div class="rond_etape">
-                                    <h4><?php echo $donnees['Id_E'];?></h4>
-                                </div>
-                                <h4><img src="img/x/noir.svg" alt="x noir"> <?php echo $donnees['Titre'];?> <img src="img/x/noir.svg" alt="x noir"></h4>
-                                <p><?php echo $donnees['ResumeCourt'];?></p>
-                                <a href="etapes.php?etape=<?php echo $donnees['Id_E'];?>">Accéder à cette étape</a>
-                            </div>
+                        <div class="span4 offset4">
+                            <div class="hr_chelou"></div>
                         </div>
-                        <?php
-                            if (($i % 3) == 0){
-                                echo"</div>";
-                                echo"<div class='row-fluid'>";
-                            }
-                            $i++;
-                            ?>
-                        <?php
-                            }
-                            ?>
+                    </div>
+                    <div class="liste-etapes">
+                        <div class="row-fluid">
+                            <?php
+                                /*
+                                *   Pour l'affichage on ouvre un row ensuite lorsqu'on a affiché 3 etapes ($i%3 == 0)
+                                *   On ferme le row et on ouvre le suivant
+                                *   On compte avec $i qui vaut 1 au début et qu'on incrémente à chaque foreach
+                                */
+                                    $i = 1;
+                                    //requete affichage de l'étape en cours
+                                    $req1 = $PDO->prepare("SELECT * FROM `etape` WHERE `Id_E` NOT IN (SELECT MAX(`Id_E`) FROM `etape`) ORDER BY `Id_E` DESC ");
+                                    $req1->execute();
+                                    $resultat1 = $req1->fetchAll(PDO::FETCH_ASSOC);
+                                    foreach ($resultat1 as $donnees) {
+                                 ?>
+                            <div class="span4">
+                                <div class="etape">
+                                    <div class="rond_etape">
+                                        <h4><?php echo $donnees['Id_E'];?></h4>
+                                    </div>
+                                    <h4><img src="img/x/noir.svg" alt="x noir"> <?php echo $donnees['Titre'];?> <img src="img/x/noir.svg" alt="x noir"></h4>
+                                    <p><?php echo $donnees['ResumeCourt'];?></p>
+                                    <a href="etapes.php?etape=<?php echo $donnees['Id_E'];?>">Accéder à cette étape</a>
+                                </div>
+                            </div>
+                            <?php
+                                if (($i % 3) == 0){
+                                    echo"</div>";
+                                    echo"<div class='row-fluid'>";
+                                }
+                                $i++;
+                                ?>
+                            <?php
+                                }
+                                ?>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="container-fluid partenaires">
             <div class="row-fluid">

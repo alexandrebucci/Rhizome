@@ -34,13 +34,14 @@
 		width: 100%;
 	}
 
-	#mobile_barre {
-		background: #070707;
-		height: 54px;
-		box-shadow: 0px 3px 6px rgba(0,0,0,.6);
-		-webkit-box-shadow: 0px 3px 6px rgba(0,0,0,.6);
-		-o-box-shadow: 0px 3px 6px rgba(0,0,0,.6);
-		-moz-box-shadow: 0px 3px 6px rgba(0,0,0,.6);
+	#mobile_menu_gauche {
+		background: blue;
+		display: block;
+		float: left;
+	}
+
+	#mobile_menu_droite {
+		background: green;
 	}
 
 	#logo_mobile {
@@ -48,22 +49,9 @@
 	}
 
 	#logo_mobile img {
-		width: 220px;
-		margin-bottom: 60px !important;
-		padding-bottom: 30px;
-		position: relative;
-		z-index: 1;
+		margin-right: 0!important;
 	}
 
-	#menu_a_mobile {
-		position: absolute;
-		top: 12px;
-		right: 20px;
-	}
-
-	#menu_a_mobile img {
-		width: 34px;
-	}
 	#rubriques {
 		background: cyan;
 		width: 350px;
@@ -153,6 +141,22 @@
 	#lot {
 		width: 94% !important;
 		margin: auto!important;
+	}
+
+	#lot div {
+		top: -145px;
+	}
+
+	#lot div h3 {
+	text-align: center;
+	font-size: 4.5em;
+	}
+
+	#lot div h4 {
+		font-weight: 100;
+		text-align: center;
+		font-size: 4.4em;
+		margin-top: 37px;
 	}
 
 	.partenaires .span2 a img {
@@ -273,13 +277,14 @@
 		width: 100%;
 	}
 
-	#mobile_barre {
-		background: #070707;
-		height: 71px;
-		box-shadow: 0px 3px 6px rgba(0,0,0,.6);
-		-webkit-box-shadow: 0px 3px 6px rgba(0,0,0,.6);
-		-o-box-shadow: 0px 3px 6px rgba(0,0,0,.6);
-		-moz-box-shadow: 0px 3px 6px rgba(0,0,0,.6);
+	#mobile_menu_gauche {
+		background: blue;
+		display: block;
+		float: left;
+	}
+
+	#mobile_menu_droite {
+		background: green;
 	}
 
 	#logo_mobile {
@@ -287,22 +292,9 @@
 	}
 
 	#logo_mobile img {
-		width: 290px;
-		margin-bottom: 60px !important;
-		padding-bottom: 30px;
-		position: relative;
-		z-index: 1;
+		margin-right: 0!important;
 	}
 
-	#menu_a_mobile {
-		position: absolute;
-		top: 12px;
-		right: 20px;
-	}
-
-	#menu_a_mobile img {
-		width: 50px;
-	}
 
 	header .span6 p {
 		padding: 110px 0 30px 0px !important;
@@ -456,6 +448,15 @@
 		-moz-box-shadow: 0px 3px 6px rgba(0,0,0,.6);
 	}
 
+	#menu_horizontal li a{
+		font-size: 16px !important;
+	}
+
+	ul#menu_horizontal {
+		margin-top: -35px;
+		margin-left: 190px;
+	}
+
 	#logo_mobile {
 		margin-left: 0px !important;
 	}
@@ -521,6 +522,30 @@
 	#lot {
 		width: 97% !important;
 		margin: auto;
+	}
+
+	#lot div {
+		top: -255px;
+	}
+
+	#lot div h3 {
+	text-align: center;
+	font-size: 9.5em;
+	}
+
+	#lot div h4 {
+		font-weight: 100;
+		text-align: center;
+		font-size: 9.4em;
+		margin-top: 87px;
+	}
+
+	#lot a {
+		margin: 150px 10px;
+	}
+
+	#lot p {
+		margin: -140px 10px;
 	}
 
 	.cl-effect-10 a {
@@ -617,6 +642,26 @@
 
 	#lot p{
 		font-size: 1em!important;
+	}
+
+	#lot div {
+		top: -115px;
+	}
+
+	#lot div h3 {
+	text-align: center;
+	font-size: 3.5em;
+	}
+
+	#lot div h4 {
+		font-weight: 100;
+		text-align: center;
+		font-size: 3.4em;
+		margin-top: 17px;
+	}
+
+	#lot p{
+		margin-top: -90px;
 	}
 
 	.etape {
