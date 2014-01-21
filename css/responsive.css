@@ -35,13 +35,21 @@
 	}
 
 	#mobile_menu_gauche {
-		background: blue;
+		width: 208px;
 		display: block;
 		float: left;
 	}
 
 	#mobile_menu_droite {
-		background: green;
+		background: #111;
+		height: 51px;
+	}
+
+	#mobile_menu_droite img{
+		float: right;
+		display: block;
+		height: 40px;
+		margin:5px 20px auto auto;
 	}
 
 	#logo_mobile {
@@ -170,32 +178,53 @@
 		width: 50% !important;
 	}
 
+	footer ul {
+		margin: 10px 0 0 0 !important;
+		text-align: center;
+
+		width: 672px;
+		padding: 0;
+		margin: 25px auto 80px auto;
+		list-style-type: none;
+	}
+
 	footer li {
 		font-size: 10px;
+		clear: both !important;
+
+
+		margin-left:2px;
+		float:left; /*pour IE*/
 	}
 
-	footer ul {
-		text-align: center;
-		list-style-type: none;
-		margin-left: 0;
-		padding-top: 15px;
-	}
-
-	footer ul li a{
-		color: #fff;
-	}
 
 	footer ul li img {
 		display: none;
 	}
 
+
 	footer ul li p {
-		margin: 0 0 0 0px !important;
+	 display:block;
+	 float:left;
+	 color:black;
+	 text-decoration:none;
+	 text-align:center;
+	 padding:5px;
+	 color: #fff;
+	 font-weight: 100;
+	 margin: 0 0 0 20px;
+	 }
+
+	footer ul li a{
+		margin: 0 5px 0 0;
 	}
 
-	footer a {
-		margin: 0!important;
+	footer ul li a p:hover{
+		color: #AD1F1F;
 	}
+
+
+	
 
 	footer .span4 img {
 		margin: 10px auto 20px !important;
@@ -303,13 +332,21 @@
 	}
 
 	#mobile_menu_gauche {
-		background: blue;
+		width: 208px;
 		display: block;
 		float: left;
 	}
 
 	#mobile_menu_droite {
-		background: green;
+		background: #111;
+		height: 51px;
+	}
+
+	#mobile_menu_droite img{
+		float: right;
+		display: block;
+		height: 40px;
+		margin:5px 20px auto auto;
 	}
 
 	#logo_mobile {
@@ -382,26 +419,17 @@
 	}
 
 	footer li {
-		font-size: 13px;
+		font-size: 12px;
 	}
 
 	footer ul {
-		text-align: center;
-		list-style-type: none;
-		margin-left: 0;
-		padding-top: 15px;
-	}
-
-	footer ul li a{
-		color: #fff;
-	}
-
-	footer ul li img {
-		display: none;
+		
+		max-width: 402px !important;
+		margin: 0 auto 0 auto !important;
 	}
 
 	footer ul li p {
-		margin: 0 0 8px 0px !important;
+		margin: 10px 0 0px 0px !important;
 	}
 
 	footer a {
@@ -501,7 +529,7 @@
 	}
 
 	ul#menu_horizontal {
-		margin-top: -35px;
+		margin-top: -31px;
 		margin-left: 190px;
 	}
 
@@ -627,26 +655,17 @@
 	}
 
 	footer li {
-		font-size: 16px;
+		font-size: 12px;
 	}
 
 	footer ul {
-		text-align: center;
-		list-style-type: none;
-		margin-left: 0;
-		padding-top: 15px;
-	}
-
-	footer ul li a{
-		color: #fff;
-	}
-
-	footer ul li img {
-		display: none;
+		
+		max-width: 402px !important;
+		margin: 0 auto 0 auto !important;
 	}
 
 	footer ul li p {
-		margin: 0 0 10px 0px !important;
+		margin: 10px 0 0px 0px !important;
 	}
 
 	footer a {

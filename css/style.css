@@ -111,14 +111,12 @@ header .span3 a:active {
 
 #menu_barre {
 	width: 100%;
-	background: rgba(20,20,20,0.82);
-	height: 70px;
+	background: rgba(34, 34, 34, 0.96);
+	height: 43px;
 	z-index: 1;
 }
 
-#menulist {
-	margin-top: -15px;
-}
+
 
 nav {
 	z-index:200;
@@ -129,24 +127,24 @@ nav {
 
 ul#menu_horizontal li { 
 	position: relative;
-	top: 23px;
+	top: 12px;
 	display : inline;
-	padding : 0 0.5em; 
-	float: left;
-	color: white;
-}
+	 }
 ul#menu_horizontal {
 	list-style-type : none; 
-	margin-top: 20px;
 }
 
 nav li a {
 	color: white;
-	font-size: 20px;
+	font-size: 1.1em;
+	padding: 30px;
+}
+nav li:first-child a {
+	padding-left:0px;
 }
 
 nav li a:hover {
-	color: #aaa;
+	color: #A51D1D;
 	text-decoration: none;
 }
 
@@ -189,7 +187,7 @@ p {
 	font-weight: normal;
 	color:#AD1F1F;
 	font-size: 16px;
-	margin-top:0px;
+	margin-top:-13px;
 }
 
 #home_video {
@@ -480,6 +478,10 @@ footer ul li p {
 
 footer ul li a{
 	margin: 0 5px 0 0;
+}
+
+footer ul li a p:hover{
+	color: #AD1F1F;
 }
 
 footer .span4 img {
@@ -941,4 +943,11 @@ footer .span12 p {
     text-align: center; /* ensures the image is always in the h-middle */
     overflow: hidden; /* hide the cropped portion */
     position: relative;
+}
+
+.resumeEtape{
+	background-color: #D7D7D7;
+	padding: 0 10px 10px 10px ;
+	margin-bottom: 20px;
+	float:left;
 }
