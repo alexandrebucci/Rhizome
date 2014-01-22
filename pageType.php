@@ -27,9 +27,8 @@
         <link rel="stylesheet" href="css/component.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="all">
-        <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="lightBox/jquery.fancybox.css?v=2.1.5" media="screen" />
 
 
@@ -187,20 +186,52 @@
                         <div id="contenuIndice">
                             <div id='photo'class="OFF">
                                 <div class="row-fluid">
+                                    <?php 
+                                        /*
+                                        *   Pour l'affichage on ouvre un row ensuite lorsqu'on a affiché 4 photos ($i%4 == 0)
+                                        *   On ferme le row et on ouvre le suivant
+                                        *   On compte avec $i qui vaut 1 au début et qu'on incrémente à chaque foreach
+                                        */
+                                        $i = 1;
+                                        // variable pour savoir combien d'image noire on affiche à la dernière ligne
+                                        $j = 0;
+                                        //requete affichage de l'étape en cours          
+                                        $reqP = $PDO->prepare('SELECT * FROM `indice` WHERE `Type`= "Photo" AND `Id_E` = :idE');
+                                        $reqP->execute(Array(
+                                            ":idE" => $idE
+                                        ));
+                                        $resultatP = $reqP->fetchAll(PDO::FETCH_ASSOC);
+                                        foreach ($resultatP as $donnees) {
+                                    ?>
                                     <div class="span3">
                                         <div class="rogneImg">
-                                            <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
-                                            <p>18/10/2013</p>
+                                            <a class="fancybox" href="<?php echo $donnees['Photo']; ?>" data-fancybox-group="gallery" title="titre <?php echo $donnees['Id_I']; ?>">
+                                                <img src="<?php echo $donnees['Photo']; ?>" alt="<?php echo $donnees['Id_I']; ?>"/>
+                                            </a>
+                                            <p>
+                                                <?php
+                                                    $date = $donnees['Date'];
+                                                    setlocale (LC_TIME, 'fr-FR', 'fra'); 
+                                                    //$formatDate = date("d/m/Y", strtotime($date));Date format 20/04/2013
+                                                    $formatDate = utf8_encode(strftime("d/m/Y", strtotime($date)));
+                                                    echo $formatDate;
+                                                ?>
+                                            </p>
                                             <a class="sourcePho" href="#">Flickr</a>
                                         </div>
                                     </div>
-                                    <div class="span3">
-                                        <div class="rogneImg">
-                                            <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
-                                            <p>18/10/2013</p>
-                                            <a class="sourcePho" href="#">Flickr</a>
-                                        </div>                                   
-                                    </div>
+                                   <?php
+                                        if (($i % 4) == 0){
+                                            echo"</div>";
+                                            echo"<div class='row-fluid'>";
+                                            $j = 0;
+                                        }
+                                        $i++;
+                                        $j++;
+                                    ?>
+                                    <?php
+                                        }
+                                    ?>
                                     <div class="span3">
                                         <div class="rogneImg">
                                             <div class="proposeImg">
@@ -208,11 +239,18 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <?php
+                                        $imgrestante = 4-$j-1;
+                                        for ($k=0; $k < $imgrestante; $k++) { 
+                                    ?>
                                     <div class="span3">
                                         <div  id="blackPho" class="rogneImg">
                                             <div class="blackImg"></div>
                                         </div>
                                     </div>
+                                    <?php
+                                        }
+                                    ?>
                                 </div>
                                 <br />
                             </div>
@@ -227,64 +265,120 @@
 
                             <div id='article'class="OFF">
                                <div class="row-fluid">
+                                    <?php
+                                        /*
+                                        *   Pour l'affichage on ouvre un row ensuite lorsqu'on a affiché 4 articles ($i%4 == 0)
+                                        *   On ferme le row et on ouvre le suivant
+                                        *   On compte avec $i qui vaut 1 au début et qu'on incrémente à chaque foreach
+                                        */
+                                        $i = 1;
+                                        // variable pour savoir combien d'image noire on affiche à la dernière ligne
+                                        $j = 0;
+                                        //requete affichage de l'étape en cours
+                                        $reqA = $PDO->prepare('SELECT * FROM `indice` WHERE `Type`= "Article" AND `Id_E` = :idE');
+                                        $reqA->execute(Array(
+                                            ":idE" => $idE
+                                        ));
+                                       $resultatA = $reqA->fetchAll(PDO::FETCH_ASSOC);
+                                       foreach ($resultatA as $donnees) {
+                                    ?>
                                     <div class="span3">
                                         <div class="rogneArt">
-                                            <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
-                                            <a class="titre-article" href="#">L'assassinat de monsieur Martinez</a>
-                                            <p>18/10/2013</p>
+                                            <a class="fancybox" href="<?php echo $donnees['Photo']; ?>" data-fancybox-group="gallery" title="titre <?php echo $donnees['Id_I']; ?>">
+                                                <img src="<?php echo $donnees['Photo']; ?>" alt="<?php echo $donnees['Id_I']; ?>"/>
+                                            </a>
+                                            <p class="titre-article"><?php $donnees['Titre']; ?></p>
+                                            <p class="date-article">18/10/2013</p>
                                         </div>
                                     </div>
-                                    <div class="span3">
-                                        <div class="rogneArt">
-                                            <a class="fancybox" href="imgIndice/zae.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="imgIndice/zae.jpg" alt="" /></a>
-                                            <a class="titre-article" href="#">L'assassinat de monsieur Martinez</a>
-                                            <p>18/10/2013</p>
-                                        </div>                                   
-                                    </div>
+                                    <?php
+                                        if (($i % 4) == 0){
+                                            echo"</div>";
+                                            echo"<div class='row-fluid'>";
+                                            $j = 0;
+                                        }
+                                        $i++;
+                                        $j++;
+                                    ?>
+                                    <?php
+                                        }
+                                    ?>
                                     <div class="span3">
                                         <div id="proposeArt" class="proposeImg">
                                             <h2>Propose moi d’autres photos d'articles à travers tes commentaires. Elles peuvent s’avérer utiles.</h2>
                                         </div>
                                     </div>
+                                    <?php
+                                        $imgrestante = 4-$j-1;
+                                        for ($k=0; $k < $imgrestante; $k++) { 
+                                    ?>
                                     <div class="span3">
                                         <div id="blackArt" class="rogneArt">
                                             <div class="blackImg"></div>
                                         </div>
                                     </div>
+                                    <?php
+                                        }
+                                    ?>
                                 </div>
                                 <br />
                             </div>
 
                             <div id='lien'class="OFF">
                                <div class="row-fluid">
+                                    <?php 
+                                        /*
+                                        *   Pour l'affichage on ouvre un row ensuite lorsqu'on a affiché 2 liens ($i%2 == 0)
+                                        *   On ferme le row et on ouvre le suivant
+                                        *   On compte avec $i qui vaut 1 au début et qu'on incrémente à chaque foreach
+                                        */
+                                        $i = 1;
+                                       // variable pour savoir combien d'image noire on affiche à la dernière ligne
+                                        $j = 0;
+                                        //requete affichage de l'étape en cours
+                                        $reqL = $PDO->prepare('SELECT * FROM `indice` WHERE `Type`= "Lien" AND `Id_E` = :idE');
+                                        $reqL->execute(Array(
+                                            ":idE" => $idE
+                                        ));
+                                        $resultatL = $reqL->fetchAll(PDO::FETCH_ASSOC);
+                                        foreach ($resultatL as $donnees) {
+                                    ?>
                                     <div class="span6">
                                         <div class="info-liens">
-                                            <a href="#">
-                                                <h2>L'assassinat de monsieur Martinez</h2>
+                                            <a href="<?php $donnees['Url']; ?>">
+                                                <h2><?php echo $donnees['Titre']; ?></h2>
                                                 <p>Source</p>
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="span6">
-                                        <div class="info-liens">
-                                            <a href="#">
-                                                <h2>L'assassinat de monsieur Martinez</h2>
-                                                <p>Source</p>
-                                            </a>
-                                        </div>                                
-                                    </div>
-                                </div>
-                                <div class="row-fluid">
+                                    <?php
+                                        $j++;
+                                        if (($i % 2) == 0){
+                                            echo"</div>";
+                                            echo"<div class='row-fluid'>";
+                                            $j = 0;
+                                        }
+                                        $i++;
+                                    ?>
+                                    <?php
+                                        }
+                                    ?>
                                     <div class="span6">
                                         <div class="proposeLien">
                                             <h2>Aucune source internet pertinente n’a été découverte. Si tu en trouves envoie-les par commentaire.</h2>
                                         </div>
                                     </div>
+                                    <?php
+                                        if($j == 0){ 
+                                    ?>
                                     <div class="span6">
                                         <div class="rogneLiens">
                                             <div class="blackImg"></div>
                                         </div>
                                     </div>
+                                    <?php
+                                        }
+                                    ?>
                                 </div>
                                 <br />
                             </div>

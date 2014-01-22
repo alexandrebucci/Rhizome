@@ -1,3 +1,6 @@
+<?php
+    require_once("datas/parametres.php");
+    ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -8,7 +11,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/component.css" type="text/css" media="all">
-        <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="all">
         <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
@@ -18,10 +20,11 @@
         <!-- Style
             ================================================== -->
         <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all">
     </head>
     <body>
-        <header>
-            <nav>
+       <header>
+             <nav>
                 <div class="ban">
                     <div id="menu_barre">
                         <div class="container-fluid">
@@ -37,10 +40,12 @@
                                     <div class="span7" id="menulist">
                                         <ul id="menu_horizontal">
                                             <li><a href="accueil.php">Accueil</a></li>
-                                            <li class="x_separate">X
+                                            <li class="x_separate">
+                                                <img src="img/x/blanc.svg" alt="x blanc">
                                             <li>
                                             <li><a href="news.php">Histoire</a></li>
-                                            <li class="x_separate">X
+                                            <li class="x_separate">
+                                                <img src="img/x/blanc.svg" alt="x blanc">
                                             <li>
                                             <li><a href="livreor.php">Étapes</a></li>
                                         </ul>
@@ -50,92 +55,68 @@
                         </div>
                     </div>
                     <div id="menu_mobile">
-                        <div id="mobile_barre">
-                            <a href="#" id="logo_mobile"><img src="img/mobile/logo.svg" alt="logomobile"></a>
-                            <a href="#" id="menu_a_mobile"><img src="img/mobile/menu.svg" alt="menu"></a>
-                        </div>
-                        <div id="rubriques">
-                            <ul>
-                                <li>Histoire</li>
-                                <li>Étapes</li>
-                                <li>Flickr</li>
-                            </ul>
-                        </div>
+                        <!-- <div id="mobile_barre"> -->
+                            <div id="mobile_menu_gauche">
+                                <a href="#" id="logo_mobile"><img src="img/mobile/logo.svg" alt="logomobile"></a>
+                            </div>
+                            <div id="mobile_menu_droite">
+                                <a ref="#"  id="menu_a_mobile"><img src="img/mobile/menu.svg" alt="menu"></a>
+                                <div id="rubriques">
+                                    <ul>
+                                        <li>Histoire</li>
+                                        <li>Étapes</li>
+                                        <li>Flickr</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        <!-- </div> -->
                     </div>
                     <div class="row-fluid">
-                        <div class="span6">
-                            <p>Je m’appelle Damien et je suis à la recherche d’une mystérieuse personne à <span>Montbéliard</span>. J’ai besoin de votre aide pour la démasquer.</p>
+                        <div class="span12">
+                            <div id="titreEtape">
+                                <h1>Découvrez les étapes</h1>
+                                <div class="hr_chelou"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span3">
-                            <a href="#">Découvre mon histoire</a>
+
                         </div>
+
                     </div>
+                
             </nav>
             <!--end:main-nav--> 
         </header>
         <!--end:flx-header-->
         </div>
         <div class="container-fluid after_ban">
-            <div class="row-fluid">
-                <div class="span8 main_left_home">
-                    <div id="a_propos">
-                        <h2>Les projets Rhizome</h2>
-                        <p>Au cours du cursus Master 1 Produits et Services Multimédia de l'Université de Franche-Comté, il nous est demandé de réaliser un projet transmédia sur le thème du patrimoine de Montbéliard. C’est-à-dire que l’histoire doit présenter et se dérouler sur un ou plusieurs lieux du patrimoine de Montbéliard de manière interactive et participative.</p>
-                        <h2>L'équipe</h2>
-                        <p>Nous sommes étudiants en master Produits et Services Multimédia à l'Université de Montbéliard. Notre équipe est composée de 6 personnes :</p>
-                        <div class="row-fluid">
-                            <div class="span4">
-                                <h3>Alexandre Bucci</h3>
-                                <p>Chef de projet de l'équipe, et développeur Front-End</p>
-                            </div>
-                            <div class="span4">
-                                <h3>Félix Busa</h3>
-                                <p>Réalisateur audiovisuel</p>
-                            </div>
-                            <div class="span4">
-                                <h3>Pierre Grosjean</h3>
-                                <p>Designer web</p>
+            <?php
+                $etape ="";
+                //requete affichage de l'étape en cours
+                $req0 = $PDO->prepare("SELECT * FROM `etape`");
+                $req0->execute();
+                $resultat0 = $req0->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($resultat0 as $donnees) {
+                    
+                    $etape = $etape.'<div class="row-fluid"><div class="span12 resumeEtape">
+                        <div class="span5 main_left_home">
+                            <h2>Etape '.$donnees['Id_E'].': '.$donnees['Titre'].'</h2>
+                            <h3>'.$donnees['Date'].'</h3>
+                            <div id="home_video">
+                                <iframe width="640" height="360" src="//www.youtube.com/embed/5uRN7iJ5CqQ" frameborder="0" allowfullscreen></iframe>
+                                '.$donnees['Video'].'
                             </div>
                         </div>
-                         <div class="row-fluid">
-                            <div class="span4">
-                                <h3>Charlotte Habre</h3>
-                                <p>Chargée de relations publiques</p>
-                            </div>
-                            <div class="span4">
-                                <h3>Gabrielle Penneroux</h3>
-                                <p>Chargée de communication</p>
-                            </div>
-                            <div class="span4">
-                                <h3>Kilyan Sockalingum</h3>
-                                <p>Développeur Back-End</p>
-                            </div>
+                        <div class="span7 home_resume">
+                            <h2>Résumé</h2>
+                            <p>'.$donnees['Resume'].'</p>
+                            <a href="etape.php?etape='.$donnees['Id_E'].'">Accédez à l\'étape</a>
                         </div>
-                        <br/>
-                    </div>
-                </div>
-                <div class="span4 main_right_home">
-                    <h2><span>Rejoins-nous</span></h2>
-                    <section class="color-10">
-                        <div class="cl-effect-10">
-                            <div id="fb">
-                                <img src="img/fb.svg"><a href="#" target="_blank" data-hover="Facebook"><span>Facebook</span></a>
-                            </div>
-                            <div id="tw">
-                                <img src="img/tw.svg"><a href="#" target="_blank" data-hover="Twitter"><span>Twitter</span></a>
-                            </div>
-                            <div id="yt">
-                                <img src="img/yt.svg"><a href="#" target="_blank" data-hover="Youtube"><span>Youtube</span></a>
-                            </div>
-                            <div id="fl">
-                                <img src="img/fl.svg"><a href="#" target="_blank" data-hover="Flickr"><span>Flickr</span></a>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
+                     </div>
+                    </div>';
+                }
+
+                  echo $etape;
+            ?>
         </div>
         <footer>
             <div class="container-fluid">
@@ -148,7 +129,9 @@
                                 </a>
                             </li>
                             <li>
-                                <p>X</p>
+                                <p class="x_footer">
+                                    <img src="img/x/blanc.svg" alt="x blanc">
+                                </p>
                             </li>
                             <li>
                                 <a href="#">
@@ -156,7 +139,9 @@
                                 </a>
                             </li>
                             <li>
-                                <p>X</p>
+                                <p class="x_footer">
+                                    <img src="img/x/blanc.svg" alt="x blanc">
+                                </p>
                             </li>
                             <li>
                                 <a href="#">
@@ -164,7 +149,9 @@
                                 </a>
                             </li>
                             <li>
-                                <p>X</p>
+                                <p class="x_footer">
+                                    <img src="img/x/blanc.svg" alt="x blanc">
+                                </p>
                             </li>
                             <li>
                                 <a href="#">
@@ -172,7 +159,9 @@
                                 </a>
                             </li>
                             <li>
-                                <p>X</p>
+                                <p class="x_footer">
+                                    <img src="img/x/blanc.svg" alt="x blanc">
+                                </p>
                             </li>
                             <li>
                                 <a href="#">
@@ -198,7 +187,6 @@
     </body>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/switch_div.js"></script>
-    
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
 </html>
