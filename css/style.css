@@ -66,11 +66,11 @@ header .span3 a{
 	-o-box-shadow: 0px 5px 0px 0px #701616, 0px 6px 25px rgba(0,0,0,.2);
 	box-shadow: 0px 5px 0px 0px #701616, 0px 6px 25px rgba(0,0,0,.2);
 
-	-webkit-transition: all .1s ease;
-	-moz-transition: all .1s ease;
-	-ms-transition: all .1s ease;
-	-o-transition: all .1s ease;
-	transition: all .1s ease;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
 header .span3 a:hover {
@@ -84,11 +84,11 @@ header .span3 a:active {
     box-shadow: 0px 2px 0px #661515, 0px 3px 6px rgba(0,0,0,.4);
     position: relative;
     top: 3px;
-    -webkit-transition: all .1s ease;
-	-moz-transition: all .1s ease;
-	-ms-transition: all .1s ease;
-	-o-transition: all .1s ease;
-	transition: all .1s ease;
+    -webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
 #menu_barre #logo img {
@@ -251,11 +251,11 @@ p {
 	-o-box-shadow: 0px 5px 0px 0px #701616, 0px 6px 25px rgba(0,0,0,.2);
 	box-shadow: 0px 5px 0px 0px #701616, 0px 6px 25px rgba(0,0,0,.2);
 
-	-webkit-transition: all .1s ease;
-	-moz-transition: all .1s ease;
-	-ms-transition: all .1s ease;
-	-o-transition: all .1s ease;
-	transition: all .1s ease;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
 .home_resume a:hover {
@@ -269,11 +269,11 @@ p {
     box-shadow: 0px 2px 0px #661515, 0px 3px 6px rgba(0,0,0,.4);
     position: relative;
     top: 3px;
-    -webkit-transition: all .1s ease;
-	-moz-transition: all .1s ease;
-	-ms-transition: all .1s ease;
-	-o-transition: all .1s ease;
-	transition: all .1s ease;
+    -webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
 .avancement {
@@ -376,11 +376,11 @@ p {
 	-o-box-shadow: 0px 5px 0px 0px #701616, 0px 6px 25px rgba(0,0,0,.2);
 	box-shadow: 0px 5px 0px 0px #701616, 0px 6px 25px rgba(0,0,0,.2);
 
-	-webkit-transition: all .1s ease;
-	-moz-transition: all .1s ease;
-	-ms-transition: all .1s ease;
-	-o-transition: all .1s ease;
-	transition: all .1s ease;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
 .etape a:hover {
@@ -394,11 +394,11 @@ p {
     box-shadow: 0px 2px 0px #661515, 0px 3px 6px rgba(0,0,0,.4);
     position: relative;
     top: 3px;
-    -webkit-transition: all .1s ease;
-	-moz-transition: all .1s ease;
-	-ms-transition: all .1s ease;
-	-o-transition: all .1s ease;
-	transition: all .1s ease;
+    -webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
 .partenaires{
@@ -502,6 +502,7 @@ footer .span12 p {
 #titreEtape h1{
 	text-align: center;
 	color: white;
+	text-shadow: 2px 2px 1px rgba(0,0,0,.8);
 }
 
 #titreEtape h2{
@@ -727,6 +728,20 @@ footer .span12 p {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.sourcePho:hover {
+	background: #111;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
 .date-article{
@@ -748,7 +763,25 @@ footer .span12 p {
 	color: #333;
 	position: absolute;
 	right: 0;
+<<<<<<< HEAD
 	bottom: 26px;
+=======
+	bottom: 36px;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.titre-article:hover {
+	background: #D0D0D0;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+>>>>>>> 2fc6d599a203c19e13b228f0f6a0e0ad57dba9bd
 }
 
 .info-liens a{
@@ -774,15 +807,20 @@ footer .span12 p {
 	-o-box-shadow: 0px 5px 0px 0px #B3B3B3, 0px 6px 25px rgba(0,0,0,.2);
 	box-shadow: 0px 5px 0px 0px #B3B3B3, 0px 6px 25px rgba(0,0,0,.2);
 
-	-webkit-transition: all .1s ease;
-	-moz-transition: all .1s ease;
-	-ms-transition: all .1s ease;
-	-o-transition: all .1s ease;
-	transition: all .1s ease;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
 .info-liens a:hover {
-	background: #E0E0E0;
+	background: #D0D0D0;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 	
 }
 
@@ -792,11 +830,11 @@ footer .span12 p {
     box-shadow: 0px 2px 0px #B3B3B3, 0px 3px 6px rgba(0,0,0,.4);
     position: relative;
     top: 3px;
-    -webkit-transition: all .1s ease;
-	-moz-transition: all .1s ease;
-	-ms-transition: all .1s ease;
-	-o-transition: all .1s ease;
-	transition: all .1s ease;
+    -webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
 .info-liens h2{

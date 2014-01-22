@@ -123,14 +123,19 @@
         </header>
         <!--end:flx-header-->
         </div>
+
         <div class="container-fluid after_ban">
             <div class="row-fluid">
-                <div class="span8 main_left_home">
+                <div class="span12 main_left_home">
                     <h2>Titre</h2>
                     <h3> Date</h3>
                     <div id="home_video">
                         <iframe width="640" height="360" src="//www.youtube.com/watch?v=UJSyY5HZNYw" frameborder="0" allowfullscreen></iframe>
                     </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span8">
                     <div class="home_resume">
                         <h2>Résumé</h2>
                         <p>Commodo squid officia chia, exercitation craft beer Marfa umami +1 fashion axe four loko nisi butcher. Tote bag art party tempor meh butcher. Readymade American Apparel deserunt keytar.Commodo squid officia chia, exercitation craft beer Marfa umami +1 fashion axe four loko nisi butcher. Tote bag art party tempor meh butcher. Readymade American Apparel deserunt keytar.</p>
@@ -158,6 +163,9 @@
                 </div>
             </div>
         </div>
+
+
+
         <div class="container-fluid avancement">
             <div class="row-fluid">
                 <div class="span12">
