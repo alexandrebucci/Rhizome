@@ -1,5 +1,6 @@
 <?php
     require_once("datas/parametres.php");
+    
     ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -95,11 +96,14 @@
                         $req0->execute();
                         $resultat0 = $req0->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($resultat0 as $donnees) {
-                            # code...
+                            $date = $donnees['Date'];
+                            setlocale (LC_TIME, 'fr-FR', 'fra'); 
+                            //$formatDate = date("d/m/Y", strtotime($date));                                                                    Date format 20/04/2013
+                            $formatDate = utf8_encode(strftime("%A %d %B %Y", strtotime($date)));
                         }
                         ?>
                     <h2><?php echo $donnees['Titre'];?></h2>
-                    <h3><?php echo $donnees['Date'];?></h3>
+                    <h3><?php echo $formatDate;?></h3>
                     <div id="home_video">
                         <!--  <iframe width="640" height="360" src="//www.youtube.com/embed/5uRN7iJ5CqQ" frameborder="0" allowfullscreen></iframe> -->
                         <?php echo $donnees['Video'];?>
