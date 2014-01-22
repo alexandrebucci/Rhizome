@@ -729,7 +729,7 @@ footer .span12 p {
 	right: 0;
 }
 
-#article p{
+.date-article{
 	background-color: #3A3A3A;
 	width: 100%;
 	padding: 8px 0;
@@ -748,7 +748,7 @@ footer .span12 p {
 	color: #333;
 	position: absolute;
 	right: 0;
-	bottom: 36px;
+	bottom: 26px;
 }
 
 .info-liens a{
