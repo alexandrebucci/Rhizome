@@ -55,7 +55,7 @@
 	#mobile_menu_droite a{
 		margin: 0 !important;
 		float: right;
-		padding: 14px 14px 14px 80px;
+		padding: 14px 14px 14px 60px;
 	}
 
 	#rubriques {
@@ -173,6 +173,15 @@
 	.partenaires .span2 {
 		float: left !important;
 		width: 50% !important;
+	}
+
+	.tt-wrapper li span.active {
+		width: 60px!important;
+		margin-left: -40px!important;
+	}
+
+	#map-container {
+		height: 300px!important;
 	}
 
 	footer ul {

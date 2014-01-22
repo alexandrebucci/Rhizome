@@ -24,7 +24,7 @@ $(document).ready(function(){
         var largeMobile = $('#menu_mobile').width()-208;
         var heightMobile = $('.ban').height();
 
-        $('#rubriques ul li').css({'height':(heightMobile/3)+'px'});
+        $('#rubriques ul li').css({'height':((heightMobile-25)/3)+'px'});
 
         console.log(largeMobile);
 
@@ -49,7 +49,7 @@ $(document).ready(function(){
         $( window ).resize(function() {
                 var largeMobile2 = $('#menu_mobile').width()-208;
                var heightMobile2 = $('.ban').height();
-               $('#rubriques ul li').css({'height':(heightMobile2/3)+'px'});
+               $('#rubriques ul li').css({'height':(((heightMobile2-25)/3))+'px'});
                 $('#rubriques').css({'width':largeMobile2+'px','right':0});
 
 
