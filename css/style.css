@@ -856,12 +856,13 @@ footer .span12 p {
 .proposeImg{
 	background-color: #575757;
 	border: solid 8px #3F3F3F;
+	height: 270px;
 }
 
 
 .proposeImg h2{
 	color: #999999;
-	font-weight: 800;
+	font-weight: 400;
 	font-size: 26px;
 	padding: 5px;
 }

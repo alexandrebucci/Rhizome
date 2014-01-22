@@ -282,8 +282,16 @@
                                             <a class="fancybox" href="<?php echo $donnees['Photo']; ?>" data-fancybox-group="gallery" title="titre <?php echo $donnees['Id_I']; ?>">
                                             <img src="<?php echo $donnees['Photo']; ?>" alt="<?php echo $donnees['Id_I']; ?>"/>
                                             </a>
-                                            <p class="titre-article"><?php $donnees['Titre']; ?></p>
-                                            <p class="date-article">18/10/2013</p>
+                                            <p class="titre-article"><?php echo $donnees['Titre']; ?></p>
+                                            <p class ="date-article">
+                                                <?php
+                                                    $date = $donnees['Date'];
+                                                    setlocale (LC_TIME, 'fr-FR', 'fra'); 
+                                                    //$formatDate = date("d/m/Y", strtotime($date));Date format 20/04/2013
+                                                    $formatDate = utf8_encode(strftime("d/m/Y", strtotime($date)));
+                                                    echo $formatDate;
+                                                ?>
+                                            </p>
                                         </div>
                                     </div>
                                     <?php
