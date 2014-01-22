@@ -672,6 +672,9 @@ footer .span12 p {
 	position: relative;
 }
 
+#photo, #article, #lien{
+	opacity: 0;
+}
 #contenuIndice{
 	margin-top: 85px;
 }

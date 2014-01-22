@@ -5,14 +5,35 @@ $(document).ready(function(){
 		// on active le titre
 		$('#map_btn span').addClass('active');
 		$('#map_btn span').addClass('activeAfter');
-
+		var divActive = $('#map');
+		
 	$('#photo_btn').click(function(){
 		console.log("bouton photo");
-		$('#photo').removeClass('OFF').addClass('ON');
-		$('#map').removeClass('ON').addClass('OFF');
-		$('#article').removeClass('ON').addClass('OFF');
-		$('#lien').removeClass('ON').addClass('OFF');
+				
+		// on fade out l ancienne div active
+		 divActive.animate({'opacity':'0'},function(){
+			// on supprime l ancienne dive active 
+		 	divActive.removeClass('ON').addClass('OFF');
+			
+			// on affiche la nouvelle div active
+			$('#photo').removeClass('OFF').addClass('ON');
+			
+			// on resize la div
+			var cw = $('.rogneImg').width();
+				$('.rogneImg').css({'height':cw+'px'});
+				$( window ).resize(function() {
+					var cw = $('.rogneImg').width();
+					$('.rogneImg').css({'height':cw+'px'});
+			});
+			// on l'affiche
+			 $('#photo').animate({'opacity':'1'},function(){				
+				// on affecte la nouvelle div active
+				divActive = $('#photo');
+			 });
+		 });
+		 
 
+	
 		// on desactive les autres titre
 		$('.tt-wrapper span').removeClass('active');
 		$('.tt-wrapper span').removeClass('activeAfter');
@@ -21,23 +42,29 @@ $(document).ready(function(){
 		$('#photo_btn span').addClass('active');
 		$('#photo_btn span').addClass('activeAfter');
 
-		// size image rogne
-		var cw = $('.rogneImg').width();
-		$('.rogneImg').css({'height':cw+'px'});
-		$( window ).resize(function() {
-			var cw = $('.rogneImg').width();
-			$('.rogneImg').css({'height':cw+'px'});
-		});
 
+		
+		
 		return false;
 	});
 
 	$('#map_btn').click(function(){
 		console.log("bouton map");
-		$('#photo').removeClass('ON').addClass('OFF');
-		$('#map').removeClass('OFF').addClass('ON');
-		$('#article').removeClass('ON').addClass('OFF');
-		$('#lien').removeClass('ON').addClass('OFF');
+		
+		// on fade out l ancienne div active
+		 divActive.animate({'opacity':'0'},function(){
+			// on supprime l ancienne dive active 
+		 	divActive.removeClass('ON').addClass('OFF');
+			
+			// on affiche la nouvelle div active
+			$('#map').removeClass('OFF').addClass('ON');
+
+			// on l'affiche
+			 $('#map').animate({'opacity':'1'},function(){				
+				// on affecte la nouvelle div active
+				divActive = $('#map');
+			 });
+		 });
 
 		// on desactive les autres titre
 		$('.tt-wrapper span').removeClass('active');
@@ -58,12 +85,31 @@ $(document).ready(function(){
 
 	$('#article_btn').click(function(){
 		console.log("bouton article");
-		$('#photo').removeClass('ON').addClass('OFF');
-		$('#map').removeClass('ON').addClass('OFF');
-		$('#article').removeClass('OFF').addClass('ON');
-		$('#lien').removeClass('ON').addClass('OFF');
+		
+		// on fade out l ancienne div active
+		 divActive.animate({'opacity':'0'},function(){
+			// on supprime l ancienne dive active 
+		 	divActive.removeClass('ON').addClass('OFF');
+			
+			// on affiche la nouvelle div active
+			$('#article').removeClass('OFF').addClass('ON');
+			
+			// on resize la div
+			var cw = $('.rogneArt').width();
+					$('.rogneArt').css({'height':cw+'px'});
+			$( window ).resize(function() {
+				var cw = $('.rogneArt').width();
+				$('.rogneArt').css({'height':cw+'px'});
+			});
+			// on l'affiche
+			 $('#article').animate({'opacity':'1'},function(){				
+				// on affecte la nouvelle div active
+				divActive = $('#article');
+			 });
+		 });
+				  
 
-				// on desactive les autres titre
+		// on desactive les autres titre
 		$('.tt-wrapper span').removeClass('active');
 		$('.tt-wrapper span').removeClass('activeAfter');
 		
@@ -71,24 +117,30 @@ $(document).ready(function(){
 		$('#article_btn span').addClass('active');
 		$('#article_btn span').addClass('activeAfter');
 
-		// size image rogne
-		var cw = $('.rogneArt').width();
-		$('.rogneArt').css({'height':cw+'px'});
-		$( window ).resize(function() {
-			var cw = $('.rogneArt').width();
-			$('.rogneArt').css({'height':cw+'px'});
-		});
-
+		
+		
+		
 		return false;
 	});
 
 	$('#lien_btn').click(function(){
 		console.log("bouton lien");
-		$('#photo').removeClass('ON').addClass('OFF');
-		$('#map').removeClass('ON').addClass('OFF');
-		$('#article').removeClass('ON').addClass('OFF');
-		$('#lien').removeClass('OFF').addClass('ON');
+		
+		// on fade out l ancienne div active
+		 divActive.animate({'opacity':'0'},function(){
+			// on supprime l ancienne dive active 
+		 	divActive.removeClass('ON').addClass('OFF');
+			
+			// on affiche la nouvelle div active
+			$('#lien').removeClass('OFF').addClass('ON');
 
+			// on l'affiche
+			 $('#lien').animate({'opacity':'1'},function(){				
+				// on affecte la nouvelle div active
+				divActive = $('#lien');
+			 });
+		 });
+		 
 		// on desactive les autres titre
 		$('.tt-wrapper span').removeClass('active');
 		$('.tt-wrapper span').removeClass('activeAfter');

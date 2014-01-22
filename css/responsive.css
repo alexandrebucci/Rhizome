@@ -663,8 +663,10 @@
 	}
 
 	#lot {
-		width: 97% !important;
-		margin: auto;
+		width: 47% !important;
+		margin: -292px 10px 30px;
+		display: block;
+		float: right;
 	}
 
 	#lot div {
@@ -673,27 +675,30 @@
 
 	#lot div h3 {
 	text-align: center;
-	font-size: 9.5em;
+	font-size: 3.5em;
+	margin-top: 130px;
 	}
 
 	#lot div h4 {
 		font-weight: 100;
 		text-align: center;
-		font-size: 9.4em;
-		margin-top: 87px;
+		font-size: 3.4em;
+		margin-top: 17px;
 	}
 
 	#lot a {
-		margin: 150px 10px;
+		margin: 210px 10px;
+		padding-bottom: 5px;
 	}
 
 	#lot p {
-		margin: -140px 10px;
+		margin: -210px 10px;
+		font-size: 1em;
 	}
 
 	.cl-effect-10 a {
 		margin: 0 !important;
-		width: 100%;
+		width: 105%;
 	}
 
 	.cl-effect-10 div {
@@ -721,13 +726,17 @@
 		width: 50% !important;
 	}
 
+	.main_right_home section{
+		width: 45%;
+	}
+
 	footer li {
 		font-size: 12px;
 	}
 
 	footer ul {
 		
-		max-width: 402px !important;
+		max-width: 403px !important;
 		margin: 0 auto 0 auto !important;
 	}
 
