@@ -27,9 +27,8 @@
         <link rel="stylesheet" href="css/component.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="all">
-        <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="lightBox/jquery.fancybox.css?v=2.1.5" media="screen" />
 
 

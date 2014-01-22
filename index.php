@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/component.css" type="text/css" media="all">
         <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="all">
-        <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
         <!-- Favicons
             ================================================== -->
