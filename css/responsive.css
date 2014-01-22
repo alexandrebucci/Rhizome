@@ -261,12 +261,12 @@
 		display:none;
 	}
 
-<<<<<<< HEAD
 	.resumeEtape a{
 		width: 285px !important;
 		margin-left: auto !important;
 		margin-right: auto !important;
-=======
+	}
+	
 	#navIndice ul {
 		width: 315px!important;
 	}
@@ -298,7 +298,6 @@
 		height: 60px!important;
 		width: 60px!important;
 		background-size: 100%!important;
->>>>>>> 2fc6d599a203c19e13b228f0f6a0e0ad57dba9bd
 	}
 
 }

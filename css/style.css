@@ -763,10 +763,7 @@ footer .span12 p {
 	color: #333;
 	position: absolute;
 	right: 0;
-<<<<<<< HEAD
 	bottom: 26px;
-=======
-	bottom: 36px;
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
 	-ms-transition: all .4s ease;
@@ -781,7 +778,6 @@ footer .span12 p {
 	-ms-transition: all .4s ease;
 	-o-transition: all .4s ease;
 	transition: all .4s ease;
->>>>>>> 2fc6d599a203c19e13b228f0f6a0e0ad57dba9bd
 }
 
 .info-liens a{
