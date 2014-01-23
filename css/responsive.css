@@ -282,6 +282,7 @@
 		display:none;
 	}
 
+<<<<<<< HEAD
 	.resumeEtape a{
 		width: 285px !important;
 		margin-left: auto !important;
@@ -337,6 +338,23 @@
 
 	#photo p{
 		margin-left: 0 !important;
+=======
+
+	/*FOOTER*/
+	.footer{
+		width:50% !important;
+		margin: auto !important;
+
+	} 
+
+	.footer li{
+		margin-left:69px;
+	}
+
+	.footer p{
+		width:85px;
+		margin: 0px;
+>>>>>>> responsive htacces
 	}
 
 }
