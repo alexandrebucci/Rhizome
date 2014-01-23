@@ -98,8 +98,16 @@
                         foreach ($resultat0 as $donnees) {
                             $date = $donnees['Date'];
                             setlocale (LC_TIME, 'fr-FR', 'fra'); 
+<<<<<<< HEAD
                             //$formatDate = date("d/m/Y", strtotime($date));                                                                    Date format 20/04/2013
                             $formatDate = utf8_encode(strftime("%A %d %B %Y", strtotime($date)));
+=======
+                            //setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
+                            //$formatDate = date("d/m/Y", strtotime($date));                                                                    Date format 20/04/2013
+                            $formatDate = utf8_encode(strftime("%A %d %B %Y", strtotime($date)));   
+                            
+                             
+>>>>>>> responsive htacces
                         }
                         ?>
                     <h2><?php echo $donnees['Titre'];?></h2>
@@ -221,7 +229,7 @@
         <footer>
             <div class="container-fluid">
                 <div class="row-fluid">
-                    <div class="span10 offset1">
+                    <div class="span10 offset1 footer">
                         <ul>
                             <li>
                                 <a href="#">
