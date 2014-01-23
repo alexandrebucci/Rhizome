@@ -113,10 +113,25 @@
         <div class="container-fluid after_ban">
             <div class="row-fluid">
                 <div class="span12 main_left_home">
-                    <h2>Titre</h2>
-                    <h3> Date</h3>
+                    <?php
+                        //requete affichage de l'étape en cours
+                        $reqP = $PDO->prepare('SELECT * FROM `etape` WHERE `Id_E` = :idE');
+                        $reqP->execute(Array(
+                            ":idE" => $idE
+                        ));
+                        $resultatP = $reqP->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($resultatP as $donnees) {
+                            $date = $donnees['Date'];
+                            setlocale (LC_TIME, 'fr-FR', 'fra'); 
+                            //$formatDate = date("d/m/Y", strtotime($date));                                                                    Date format 20/04/2013
+                            $formatDate = utf8_encode(strftime("%A %d %B %Y", strtotime($date)));
+                        }
+                    ?>
+                    <h2><?php echo $donnees['Titre'];?></h2>
+                    <h3><?php echo $formatDate;?></h3>
                     <div id="home_video">
-                        <iframe width="640" height="360" src="//www.youtube.com/watch?v=UJSyY5HZNYw" frameborder="0" allowfullscreen></iframe>
+                        <!--  <iframe width="640" height="360" src="//www.youtube.com/embed/5uRN7iJ5CqQ" frameborder="0" allowfullscreen></iframe> -->
+                        <?php echo $donnees['Video'];?>
                     </div>
                 </div>
             </div>
@@ -124,8 +139,7 @@
                 <div class="span8">
                     <div class="home_resume">
                         <h2>Résumé</h2>
-                        <p>Commodo squid officia chia, exercitation craft beer Marfa umami +1 fashion axe four loko nisi butcher. Tote bag art party tempor meh butcher. Readymade American Apparel deserunt keytar.Commodo squid officia chia, exercitation craft beer Marfa umami +1 fashion axe four loko nisi butcher. Tote bag art party tempor meh butcher. Readymade American Apparel deserunt keytar.</p>
-                        <a href="#">Accédez aux indices</a>
+                        <p><?php echo $donnees['Resume'];?></p>
                     </div>
                 </div>
                 <div class="span4 main_right_home">
@@ -146,7 +160,7 @@
                             </div>
                         </div>
                     </section>
-                    <div id="lot">
+                    <!--<div id="lot">
                         <img src="img/cadeau.png" alt="cadeau">
                         <div>
                             <h3>Cadeaux</h3>
@@ -158,7 +172,7 @@
                         </p>
                         <p><a href="#">Voir les conditions</a>
                         <p>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -210,7 +224,7 @@
                                                     $date = $donnees['Date'];
                                                     setlocale (LC_TIME, 'fr-FR', 'fra'); 
                                                     //$formatDate = date("d/m/Y", strtotime($date));Date format 20/04/2013
-                                                    $formatDate = utf8_encode(strftime("d/m/Y", strtotime($date)));
+                                                    $formatDate = utf8_encode(strftime("%d/%m/%Y", strtotime($date)));
                                                     echo $formatDate;
                                                     ?>
                                             </p>
@@ -288,7 +302,7 @@
                                                     $date = $donnees['Date'];
                                                     setlocale (LC_TIME, 'fr-FR', 'fra'); 
                                                     //$formatDate = date("d/m/Y", strtotime($date));Date format 20/04/2013
-                                                    $formatDate = utf8_encode(strftime("d/m/Y", strtotime($date)));
+                                                    $formatDate = utf8_encode(strftime("%d/%m/%Y", strtotime($date)));
                                                     echo $formatDate;
                                                 ?>
                                             </p>
